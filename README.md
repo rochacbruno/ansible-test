@@ -24,3 +24,5 @@ ansible.test.case is a testing framework and test runner within ansible tasks, i
 ansible-playbook my-test-suite.yaml
 
 ```
+
+Use https://docs.ansible.com/ansible/latest/collections/ansible/builtin/junit_callback.html in the ansible.cfg to get a results-junit.xml file
