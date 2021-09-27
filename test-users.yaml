@@ -1,0 +1,80 @@
+---
+- name: Create Two Active Users
+  ansible.test.case:
+    using: galaxy.user
+    action: create
+    with:
+      - name: admin
+        password: admin
+        active: true
+      - name: user
+        password: user
+        active: true
+    register: users
+    assert:
+      - that: status == 200
+
+- name: User name is unique 
+  ansible.test.case:
+    using: galaxy.user
+    action: create
+    with:
+      name: "{{ users[0].name }}"
+      password: "{{ faux.gen_string }}"
+      active: true
+    assert:
+      - that: status == 409
+
+- name: User password complexity 
+  ansible.test.case:
+    using: galaxy.user
+    action: create
+    with:
+      name: "{{ faux.gen_string(5) }}"
+      password: "1234"
+      active: true
+    assert:
+      - that: status == 400
+      - that: "'Password must be at least 8 characters long...' in data.message"
+
+- name: Test List Users
+  ansible.test.case:
+    using: galaxy.user
+    action: list
+    with:
+      limit: 10
+    assert:
+      - that: status == 200
+      - that: len(data) == 2
+      - that: active is true
+        for_each_in: data
+      - that: username in {{ users.values('name') }}
+        for_each_in: data
+
+- name: Test Deactivate User
+  ansible.test.case:
+    using: galaxy.user
+    action: update
+    with:
+      get: 
+        name: user
+      set:
+        active: false
+    assert:
+      - that: status == 200
+      - that: data.active is false
+
+- name: Test Delete User
+  ansible.test.case:
+    using: galaxy.user
+    action: 
+      - delete:
+          with:
+            name: user
+          assert:
+            - that: status == 200
+      - get:
+          with:
+            name: user
+          assert:
+            - that: status == 404
