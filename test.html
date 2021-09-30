@@ -1,0 +1,2234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test-playbook-1632853896.5214195.xml</title>
+    <style type="text/css">
+        body {
+    background-color: white;
+    padding-bottom: 20em;
+    margin: 0;
+    min-height: 15cm;
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+    font-family: sans-serif;
+}
+
+h1 {
+    background-color: #007acc;
+    color: white;
+    padding: 3mm;
+    margin-top: 0;
+    margin-bottom: 1mm;
+}
+
+.footer {
+    font-style: italic;
+    font-size: small;
+    text-align: right;
+    padding: 1em;
+}
+
+.testsuite {
+    padding-bottom: 2em;
+    margin-left: 1em;
+}
+
+.proplist {
+    width: 100%;
+    margin-bottom: 2em;
+    border-collapse: collapse;
+    border: 1px solid grey;
+}
+
+.proplist th {
+    background-color: silver;
+    width: 5em;
+    padding: 2px;
+    padding-right: 1em;
+    text-align: left;
+}
+
+.proplist td {
+    padding: 2px;
+}
+
+.index-table {
+    width: 90%;
+    margin-left: 1em;
+}
+
+.index-table td {
+    vertical-align: top;
+    width: 50%;
+}
+
+.failure-index {
+
+}
+
+.toc {
+    margin-bottom: 2em;
+    font-family: monospace;
+}
+
+.stdio, pre {
+    min-height: 1em;
+    background-color: #1e1e1e;
+    color: silver;
+    padding: 0.5em;
+}
+.tdpre {
+    background-color: #1e1e1e;
+}
+
+.test {
+    margin-left: 0.5cm;
+}
+
+.outcome {
+    border-left: 1em;
+    padding: 2px;
+}
+
+.outcome-failed {
+    border-left: 1em solid lightcoral;
+}
+
+.stats-table {
+}
+
+.stats-table td {
+    min-width: 4em;
+    text-align: right;
+}
+
+.stats-table .failed {
+    background-color: lightcoral;
+}
+
+.stats-table .passed {
+    background-color: lightgreen;
+}
+
+.matrix-table {
+    table-layout: fixed;
+    border-spacing: 0;
+    width: available;
+    margin-left: 1em;
+}
+
+.matrix-table td {
+    vertical-align: center;
+}
+
+.matrix-table td:last-child {
+    width: 0;
+}
+
+.matrix-table tr:hover {
+    background-color: yellow;
+}
+
+.matrix-axis-name {
+    white-space: nowrap;
+    padding-right: 0.5em;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    text-align: right;
+}
+
+.matrix-axis-line {
+    border-left: 1px solid black;
+    width: 0.5em;
+}
+
+.matrix-classname {
+    text-align: left;
+    width: 100%;
+    border-top: 2px solid grey;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-casename {
+    text-align: left;
+    font-weight: normal;
+    font-style: italic;
+    padding-left: 1em;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-result {
+    display: block;
+    width: 1em;
+    text-align: center;
+    padding: 1mm;
+    margin: 0;
+}
+
+.matrix-result-combined {
+    white-space: nowrap;
+    padding-right: 0.2em;
+    text-align: right;
+}
+
+.matrix-result-failed {
+    background-color: lightcoral;
+}
+
+.matrix-result-passed {
+    background-color: lightgreen;
+}
+
+.matrix-result-skipped {
+    background-color: lightyellow;
+}
+
+.matrix-even {
+    background-color: lightgray;
+}
+    </style>
+</head>
+<body>
+    
+<h1>
+    Test Report : test-playbook-1632853896.5214195.xml
+</h1>
+<a id="toc"></a>
+<table class="index-table">
+    <tr>
+        <td>
+            <ul class="toc">
+            
+                
+                <li>/home/rochacbruno/Projects/ansible-test/test-playbook.yaml:2
+                <ul>
+                    
+                    <li><a href="#5162a701-1147-49dd-9ede-56f8133aa1ec">[localhost] Functional tests for project: Gathering Facts gather_subset=[&#39;all&#39;], gather_timeout=10</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>/home/rochacbruno/Projects/ansible-test/test-playbook.yaml:17
+                <ul>
+                    
+                    <li><a href="#66bffa3c-b91e-4c20-93d1-640e3dd00d6e">[localhost] Functional tests for project: include_tasks _raw_params=test-users.yaml</a></li>
+                    
+                    <li><a href="#acfd7d10-cc6f-4f6c-8512-149e6d992485">[include] Functional tests for project: include_tasks _raw_params=test-users.yaml</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>/home/rochacbruno/Projects/ansible-test/test-users.yaml:2
+                <ul>
+                    
+                    <li><a href="#f229b0c6-78a7-4dfc-8166-486e42fc1abd">[localhost] Functional tests for project: Create Two Active Users using=namespace.project.user, action=create, inputs=[{&#39;name&#39;: &#39;admin&#39;, &#39;password&#39;: &#39;admin&#39;, &#39;active&#39;: True}, {&#39;name&#39;: &#39;user&#39;, &#39;password&#39;: &#39;user&#39;, &#39;active&#39;: True}], outputs=users, assert=[{&#39;that&#39;: &#39;status == ok&#39;}]</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>/home/rochacbruno/Projects/ansible-test/test-users.yaml:17
+                <ul>
+                    
+                    <li><a href="#5932fdd2-9849-43ec-a4e0-2bb0951839f9">[localhost] Functional tests for project: debug users msg={{ users }}</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>/home/rochacbruno/Projects/ansible-test/test-users.yaml:21
+                <ul>
+                    
+                    <li><a href="#96763b56-68de-4792-9d9f-abe095934c09">[localhost] Functional tests for project: User name is unique using=namespace.project.user, action=create, inputs={&#39;name&#39;: &#39;{{ users[0].name }}&#39;, &#39;password&#39;: &#39;1234&#39;, &#39;active&#39;: True}, assert=[{&#39;that&#39;: &#39;status == error&#39;}, {&#39;that&#39;: &#39;api.status_code == 409&#39;}, {&#39;that&#39;: &#39;cli.message == &#34;User already exists&#34;&#39;}, {&#39;that&#39;: &#34;&#39;#error&#39; in ui.elements&#34;}]</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>/home/rochacbruno/Projects/ansible-test/test-users.yaml:36
+                <ul>
+                    
+                    <li><a href="#f0ebf0ee-4a3e-4507-9584-4e99604d14fd">[localhost] Functional tests for project: User password complexity using=namespace.project.user, action=create, inputs={&#39;name&#39;: &#39;bla&#39;, &#39;password&#39;: &#39;1234&#39;, &#39;active&#39;: True}, assert=[{&#39;that&#39;: &#39;status == 400&#39;}, {&#39;that&#39;: &#34;&#39;Password must be at least 8 characters long...&#39; in data.message&#34;}]</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>/home/rochacbruno/Projects/ansible-test/test-users.yaml:49
+                <ul>
+                    
+                    <li><a href="#8c320e8c-0e7c-46d3-8158-142db72ee550">[localhost] Functional tests for project: Test List Users using=namespace.project.user, action=list, inputs={&#39;limit&#39;: 10}, assert=[{&#39;that&#39;: &#39;status == ok&#39;}, {&#39;that&#39;: &#39;len(data) == 2&#39;}, {&#39;that&#39;: &#39;active is true&#39;, &#39;for_each_in&#39;: &#39;data&#39;}, {&#39;that&#39;: &#39;username in []&#39;, &#39;for_each_in&#39;: &#39;data&#39;}]</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>/home/rochacbruno/Projects/ansible-test/test-users.yaml:63
+                <ul>
+                    
+                    <li><a href="#5d48829b-7976-490f-be94-a182b33188db">[localhost] Functional tests for project: Test Deactivate User using=namespace.project.user, action=update, inputs={&#39;get&#39;: {&#39;name&#39;: &#39;user&#39;}, &#39;set&#39;: {&#39;active&#39;: False}}, assert=[{&#39;that&#39;: &#39;status == ok&#39;}, {&#39;that&#39;: &#39;data.active is false&#39;}]</a></li>
+                    
+                </ul>
+                </li>
+                
+                <li>/home/rochacbruno/Projects/ansible-test/test-users.yaml:76
+                <ul>
+                    
+                    <li><a href="#b803258e-fd41-40cf-ac2c-c899feec03cb">[localhost] Functional tests for project: Test Delete User using=namespace.project.user, action=[{&#39;delete&#39;: {&#39;inputs&#39;: {&#39;name&#39;: &#39;user&#39;}, &#39;assert&#39;: [{&#39;that&#39;: &#39;status == ok&#39;}]}}, {&#39;get&#39;: {&#39;inputs&#39;: {&#39;name&#39;: &#39;user&#39;}, &#39;assert&#39;: [{&#39;that&#39;: &#39;status == 404&#39;}]}}]</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+            </ul>
+        </td>
+        <td class="failure-index">
+            <ul class="toc">
+            
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+                    
+                    
+                    
+                
+            
+            </ul>
+        </td>
+    </tr>
+</table>
+
+
+    <div class="testsuite">
+        <h2>Test Suite: test-playbook</h2>
+        <a id="b313d225-710d-440a-b841-e276121a1d7a"></a>
+        
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>2.4 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>10</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>/home/rochacbruno/Projects/ansible-test/test-playbook.yaml:2</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="5162a701-1147-49dd-9ede-56f8133aa1ec"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>[localhost] Functional tests for project: Gathering Facts gather_subset=[&#39;all&#39;], gather_timeout=10</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.9 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>{
+    &#34;ansible_facts&#34;: {
+        &#34;ansible_all_ipv4_addresses&#34;: [
+            &#34;172.17.0.1&#34;,
+            &#34;192.168.1.67&#34;,
+            &#34;172.20.0.1&#34;
+        ],
+        &#34;ansible_all_ipv6_addresses&#34;: [
+            &#34;fe80::42:e8ff:fe52:c220&#34;,
+            &#34;2001:8a0:f879:500:ada4:65f3:be42:6185&#34;,
+            &#34;fe80::d7b9:6e5a:3cf2:b56&#34;,
+            &#34;fe80::42:16ff:feec:ec28&#34;,
+            &#34;fe80::e4e7:e9ff:fe41:3565&#34;,
+            &#34;fe80::10ab:41ff:fe13:6d62&#34;,
+            &#34;fe80::fcd9:fff:fe00:cca2&#34;,
+            &#34;fe80::c000:feff:fe32:6805&#34;,
+            &#34;fe80::7848:f7ff:fec0:a732&#34;,
+            &#34;fe80::ac43:64ff:fe2d:cc19&#34;,
+            &#34;fe80::9c27:13ff:feac:cb5b&#34;
+        ],
+        &#34;ansible_apparmor&#34;: {
+            &#34;status&#34;: &#34;enabled&#34;
+        },
+        &#34;ansible_architecture&#34;: &#34;x86_64&#34;,
+        &#34;ansible_bios_date&#34;: &#34;05/22/2018&#34;,
+        &#34;ansible_bios_vendor&#34;: &#34;LENOVO&#34;,
+        &#34;ansible_bios_version&#34;: &#34;N22ET37W (1.14 )&#34;,
+        &#34;ansible_board_asset_tag&#34;: &#34;Not Available&#34;,
+        &#34;ansible_board_name&#34;: &#34;20L8S2N80K&#34;,
+        &#34;ansible_board_serial&#34;: &#34;NA&#34;,
+        &#34;ansible_board_vendor&#34;: &#34;LENOVO&#34;,
+        &#34;ansible_board_version&#34;: &#34;Not Defined&#34;,
+        &#34;ansible_br_afd434d048f8&#34;: {
+            &#34;active&#34;: true,
+            &#34;device&#34;: &#34;br-afd434d048f8&#34;,
+            &#34;id&#34;: &#34;8000.024216ecec28&#34;,
+            &#34;interfaces&#34;: [
+                &#34;vethcaf89d4&#34;,
+                &#34;veth4a35a56&#34;,
+                &#34;vetha628278&#34;,
+                &#34;veth749b768&#34;,
+                &#34;veth1f2413c&#34;,
+                &#34;veth31bfec5&#34;,
+                &#34;vethee6ed69&#34;
+            ],
+            &#34;ipv4&#34;: {
+                &#34;address&#34;: &#34;172.20.0.1&#34;,
+                &#34;broadcast&#34;: &#34;172.20.255.255&#34;,
+                &#34;netmask&#34;: &#34;255.255.0.0&#34;,
+                &#34;network&#34;: &#34;172.20.0.0&#34;
+            },
+            &#34;ipv6&#34;: [
+                {
+                    &#34;address&#34;: &#34;fe80::42:16ff:feec:ec28&#34;,
+                    &#34;prefix&#34;: &#34;64&#34;,
+                    &#34;scope&#34;: &#34;link&#34;
+                }
+            ],
+            &#34;macaddress&#34;: &#34;02:42:16:ec:ec:28&#34;,
+            &#34;mtu&#34;: 1500,
+            &#34;promisc&#34;: false,
+            &#34;speed&#34;: 10000,
+            &#34;stp&#34;: false,
+            &#34;type&#34;: &#34;bridge&#34;
+        },
+        &#34;ansible_chassis_asset_tag&#34;: &#34;RH0019978&#34;,
+        &#34;ansible_chassis_serial&#34;: &#34;NA&#34;,
+        &#34;ansible_chassis_vendor&#34;: &#34;LENOVO&#34;,
+        &#34;ansible_chassis_version&#34;: &#34;None&#34;,
+        &#34;ansible_cmdline&#34;: {
+            &#34;BOOT_IMAGE&#34;: &#34;/boot/vmlinuz-5.9-x86_64&#34;,
+            &#34;apparmor&#34;: &#34;1&#34;,
+            &#34;quiet&#34;: true,
+            &#34;resume&#34;: &#34;UUID=41ffbbcc-70fa-46ba-b081-168b6ade98b5&#34;,
+            &#34;root&#34;: &#34;UUID=22f9471a-4209-4383-8307-acb35aff624a&#34;,
+            &#34;rw&#34;: true,
+            &#34;security&#34;: &#34;apparmor&#34;,
+            &#34;udev.log_priority&#34;: &#34;3&#34;
+        },
+        &#34;ansible_date_time&#34;: {
+            &#34;date&#34;: &#34;2021-09-28&#34;,
+            &#34;day&#34;: &#34;28&#34;,
+            &#34;epoch&#34;: &#34;1632853894&#34;,
+            &#34;hour&#34;: &#34;19&#34;,
+            &#34;iso8601&#34;: &#34;2021-09-28T18:31:34Z&#34;,
+            &#34;iso8601_basic&#34;: &#34;20210928T193134537191&#34;,
+            &#34;iso8601_basic_short&#34;: &#34;20210928T193134&#34;,
+            &#34;iso8601_micro&#34;: &#34;2021-09-28T18:31:34.537191Z&#34;,
+            &#34;minute&#34;: &#34;31&#34;,
+            &#34;month&#34;: &#34;09&#34;,
+            &#34;second&#34;: &#34;34&#34;,
+            &#34;time&#34;: &#34;19:31:34&#34;,
+            &#34;tz&#34;: &#34;WEST&#34;,
+            &#34;tz_dst&#34;: &#34;WEST&#34;,
+            &#34;tz_offset&#34;: &#34;+0100&#34;,
+            &#34;weekday&#34;: &#34;terça&#34;,
+            &#34;weekday_number&#34;: &#34;2&#34;,
+            &#34;weeknumber&#34;: &#34;39&#34;,
+            &#34;year&#34;: &#34;2021&#34;
+        },
+        &#34;ansible_default_ipv4&#34;: {
+            &#34;address&#34;: &#34;192.168.1.67&#34;,
+            &#34;alias&#34;: &#34;wlp61s0&#34;,
+            &#34;broadcast&#34;: &#34;192.168.1.255&#34;,
+            &#34;gateway&#34;: &#34;192.168.1.254&#34;,
+            &#34;interface&#34;: &#34;wlp61s0&#34;,
+            &#34;macaddress&#34;: &#34;b4:6b:fc:a3:8c:e8&#34;,
+            &#34;mtu&#34;: 1500,
+            &#34;netmask&#34;: &#34;255.255.255.0&#34;,
+            &#34;network&#34;: &#34;192.168.1.0&#34;,
+            &#34;type&#34;: &#34;ether&#34;
+        },
+        &#34;ansible_default_ipv6&#34;: {
+            &#34;address&#34;: &#34;2001:8a0:f879:500:ada4:65f3:be42:6185&#34;,
+            &#34;gateway&#34;: &#34;fe80::206:91ff:fe73:85df&#34;,
+            &#34;interface&#34;: &#34;wlp61s0&#34;,
+            &#34;macaddress&#34;: &#34;b4:6b:fc:a3:8c:e8&#34;,
+            &#34;mtu&#34;: 1500,
+            &#34;prefix&#34;: &#34;64&#34;,
+            &#34;scope&#34;: &#34;global&#34;,
+            &#34;type&#34;: &#34;ether&#34;
+        },
+        &#34;ansible_device_links&#34;: {
+            &#34;ids&#34;: {
+                &#34;nvme0n1&#34;: [
+                    &#34;nvme-SAMSUNG_MZVLW256HEHP-000L7_S35ENA2K505032&#34;,
+                    &#34;nvme-eui.002538b58104d27b&#34;
+                ],
+                &#34;nvme0n1p1&#34;: [
+                    &#34;nvme-SAMSUNG_MZVLW256HEHP-000L7_S35ENA2K505032-part1&#34;,
+                    &#34;nvme-eui.002538b58104d27b-part1&#34;
+                ],
+                &#34;nvme0n1p2&#34;: [
+                    &#34;nvme-SAMSUNG_MZVLW256HEHP-000L7_S35ENA2K505032-part2&#34;,
+                    &#34;nvme-eui.002538b58104d27b-part2&#34;
+                ],
+                &#34;sda&#34;: [
+                    &#34;usb-Generic-_SD_MMC_20120501030900000-0:0&#34;
+                ]
+            },
+            &#34;labels&#34;: {},
+            &#34;masters&#34;: {},
+            &#34;uuids&#34;: {
+                &#34;nvme0n1p1&#34;: [
+                    &#34;22f9471a-4209-4383-8307-acb35aff624a&#34;
+                ],
+                &#34;nvme0n1p2&#34;: [
+                    &#34;41ffbbcc-70fa-46ba-b081-168b6ade98b5&#34;
+                ]
+            }
+        },
+        &#34;ansible_devices&#34;: {
+            &#34;loop0&#34;: {
+                &#34;holders&#34;: [],
+                &#34;host&#34;: &#34;&#34;,
+                &#34;links&#34;: {
+                    &#34;ids&#34;: [],
+                    &#34;labels&#34;: [],
+                    &#34;masters&#34;: [],
+                    &#34;uuids&#34;: []
+                },
+                &#34;model&#34;: null,
+                &#34;partitions&#34;: {},
+                &#34;removable&#34;: &#34;0&#34;,
+                &#34;rotational&#34;: &#34;0&#34;,
+                &#34;sas_address&#34;: null,
+                &#34;sas_device_handle&#34;: null,
+                &#34;scheduler_mode&#34;: &#34;mq-deadline&#34;,
+                &#34;sectors&#34;: &#34;113536&#34;,
+                &#34;sectorsize&#34;: &#34;512&#34;,
+                &#34;size&#34;: &#34;55.44 MB&#34;,
+                &#34;support_discard&#34;: &#34;0&#34;,
+                &#34;vendor&#34;: null,
+                &#34;virtual&#34;: 1
+            },
+            &#34;loop1&#34;: {
+                &#34;holders&#34;: [],
+                &#34;host&#34;: &#34;&#34;,
+                &#34;links&#34;: {
+                    &#34;ids&#34;: [],
+                    &#34;labels&#34;: [],
+                    &#34;masters&#34;: [],
+                    &#34;uuids&#34;: []
+                },
+                &#34;model&#34;: null,
+                &#34;partitions&#34;: {},
+                &#34;removable&#34;: &#34;0&#34;,
+                &#34;rotational&#34;: &#34;0&#34;,
+                &#34;sas_address&#34;: null,
+                &#34;sas_device_handle&#34;: null,
+                &#34;scheduler_mode&#34;: &#34;mq-deadline&#34;,
+                &#34;sectors&#34;: &#34;337424&#34;,
+                &#34;sectorsize&#34;: &#34;512&#34;,
+                &#34;size&#34;: &#34;164.76 MB&#34;,
+                &#34;support_discard&#34;: &#34;0&#34;,
+                &#34;vendor&#34;: null,
+                &#34;virtual&#34;: 1
+            },
+            &#34;loop10&#34;: {
+                &#34;holders&#34;: [],
+                &#34;host&#34;: &#34;&#34;,
+                &#34;links&#34;: {
+                    &#34;ids&#34;: [],
+                    &#34;labels&#34;: [],
+                    &#34;masters&#34;: [],
+                    &#34;uuids&#34;: []
+                },
+                &#34;model&#34;: null,
+                &#34;partitions&#34;: {},
+                &#34;removable&#34;: &#34;0&#34;,
+                &#34;rotational&#34;: &#34;0&#34;,
+                &#34;sas_address&#34;: null,
+                &#34;sas_device_handle&#34;: null,
+                &#34;scheduler_mode&#34;: &#34;mq-deadline&#34;,
+                &#34;sectors&#34;: &#34;253432&#34;,
+                &#34;sectorsize&#34;: &#34;512&#34;,
+                &#34;size&#34;: &#34;123.75 MB&#34;,
+                &#34;support_discard&#34;: &#34;0&#34;,
+                &#34;vendor&#34;: null,
+                &#34;virtual&#34;: 1
+            },
+            &#34;loop11&#34;: {
+                &#34;holders&#34;: [],
+                &#34;host&#34;: &#34;&#34;,
+                &#34;links&#34;: {
+                    &#34;ids&#34;: [],
+                    &#34;labels&#34;: [],
+                    &#34;masters&#34;: [],
+                    &#34;uuids&#34;: []
+                },
+                &#34;model&#34;: null,
+                &#34;partitions&#34;: {},
+                &#34;removable&#34;: &#34;0&#34;,
+                &#34;rotational&#34;: &#34;0&#34;,
+                &#34;sas_address&#34;: null,
+                &#34;sas_device_handle&#34;: null,
+                &#34;scheduler_mode&#34;: &#34;mq-deadline&#34;,
+                &#34;sectors&#34;: &#34;133552&#34;,
+                &#34;sectorsize&#34;: &#34;512&#34;,
+                &#34;size&#34;: &#34;65.21 MB&#34;,
+                &#34;support_discard&#34;: &#34;0&#34;,
+                &#34;vendor&#34;: null,
+                &#34;virtual&#34;: 1
+            },
+            &#34;loop12&#34;: {
+                &#34;holders&#34;: [],
+                &#34;host&#34;: &#34;&#34;,
+                &#34;links&#34;: {
+                    &#34;ids&#34;: [],
+                    &#34;labels&#34;: [],
+                    &#34;masters&#34;: [],
+                    &#34;uuids&#34;: []
+                },
+                &#34;model&#34;: null,
+                &#34;partitions&#34;: {},
+                &#34;removable&#34;: &#34;0&#34;,
+                &#34;rotational&#34;: &#34;0&#34;,
+                &#34;sas_address&#34;: null,
+                &#34;sas_device_handle&#34;: null,
+                &#34;scheduler_mode&#34;: &#34;mq-deadline&#34;,
+                &#34;sectors&#34;: &#34;66152&#34;,
+                &#34;sectorsize&#34;: &#34;512&#34;,
+                &#34;size&#34;: &#34;32.30 MB&#34;,
+                &#34;support_discard&#34;: &#34;0&#34;,
+                &#34;vendor&#34;: null,
+                &#34;virtual&#34;: 1
+            },
+            &#34;loop13&#34;: {
+                &#34;holders&#34;: [],
+                &#34;host&#34;: &#34;&#34;,
+                &#34;links&#34;: {
+                    &#34;ids&#34;: [],
+                    &#34;labels&#34;: [],
+                    &#34;masters&#34;: [],
+                    &#34;uuids&#34;: []
+                },
+                &#34;model&#34;: null,
+                &#34;partitions&#34;: {},
+                &#34;removable&#34;: &#34;0&#34;,
+                &#34;rotational&#34;: &#34;0&#34;,
+                &#34;sas_address&#34;: null,
+                &#34;sas_device_handle&#34;: null,
+                &#34;scheduler_mode&#34;: &#34;mq-deadline&#34;,
+                &#34;sectors&#34;: &#34;203456&#34;,
+                &#34;sectorsize&#34;: &#34;512&#34;,
+                &#34;size&#34;: &#34;99.34 MB&#34;,
+                &#34;support_discard&#34;: &#34;0&#34;,
+                &#34;vendor&#34;: null,
+                &#34;virtual&#34;: 1
+            },
+            &#34;loop14&#34;: {
+                &#34;holders&#34;: [],
+                &#34;host&#34;: &#34;&#34;,
+                &#34;links&#34;: {
+                    &#34;ids&#34;: [],
+                    &#34;labels&#34;: [],
+                    &#34;masters&#34;: [],
+                    &#34;uuids&#34;: []
+                },
+                &#34;model&#34;: null,
+                &#34;partitions&#34;: {},
+                &#34;removable&#34;: &#34;0&#34;,
+                &#34;rotational&#34;: &#34;0&#34;,
+                &#34;sas_address&#34;: null,
+                &#34;sas_device_handle&#34;: null,
+                &#34;scheduler_mode&#34;: &#34;mq-deadline&#34;,
+                &#34;sectors&#34;: &#34;333552&#34;,
+                &#34;sectorsize&#34;: &#34;512&#34;,
+                &#34;size&#34;: &#34;162.87 MB&#34;,
+                &#34;support_discard&#34;: &#34;0&#34;,
+                &#34;vendor&#34;: null,
+                &#34;virtual&#34;: 1
+            },
+            &#34;loop15&#34;: {
+                &#34;holders&#34;: [],
+                &#34;host&#34;: &#34;&#34;,
+                &#34;links&#34;: {
+                    &#34;ids&#34;: [],
+                    &#34;labels&#34;: [],
+                    &#34;masters&#34;: [],
+                    &#34;uuids&#34;: []
+                },
+                &#34;model&#34;: null,
+                &#34;partitions&#34;: {},
+                &#34;removable&#34;: &#34;0&#34;,
+                &#34;rotational&#34;: &#34;0&#34;,
+                &#34;sas_address&#34;: null,
+                &#34;sas_device_handle&#34;: null,
+                &#34;scheduler_mode&#34;: &#34;mq-deadline&#34;,
+                &#34;sectors&#34;: &#34;0&#34;,
+                &#34;sectorsize&#34;: &#34;512&#34;,
+                &#34;size&#34;: &#34;0.00 Bytes&#34;,
+                &#34;support_discard&#34;: &#34;0&#34;,
+                &#34;vendor&#34;: null,
+                &#34;virtual&#34;: 1
+            },
+            &#34;loop2&#34;: {
+                &#34;holders&#34;: [],
+                &#34;host&#34;: &#34;&#34;,
+                &#34;links&#34;: {
+                    &#34;ids&#34;: [],
+                    &#34;labels&#34;: [],
+                    &#34;masters&#34;: [],
+                    &#34;uuids&#34;: []
+                },
+                &#34;model&#34;: null,
+                &#34;partitions&#34;: {},
+                &#34;removable&#34;: &#34;0&#34;,
+                &#34;rotational&#34;: &#34;0&#34;,
+                &#34;sas_address&#34;: null,
+                &#34;sas_device_handle&#34;: null,
+                &#34;scheduler_mode&#34;: &#34;mq-deadline&#34;,
+                &#34;sectors&#34;: &#34;133320&#34;,
+                &#34;sectorsize&#34;: &#34;512&#34;,
+                &#34;size&#34;: &#34;65.10 MB&#34;,
+                &#34;support_discard&#34;: &#34;0&#34;,
+                &#34;vendor&#34;: null,
+                &#34;virtual&#34;: 1
+            },
+            &#34;loop3&#34;: {
+                &#34;holders&#34;: [],
+                &#34;host&#34;: &#34;&#34;,
+                &#34;links&#34;: {
+                    &#34;ids&#34;: [],
+                    &#34;labels&#34;: [],
+                    &#34;masters&#34;: [],
+                    &#34;uuids&#34;: []
+                },
+                &#34;model&#34;: null,
+                &#34;partitions&#34;: {},
+                &#34;removable&#34;: &#34;0&#34;,
+                &#34;rotational&#34;: &#34;0&#34;,
+                &#34;sas_address&#34;: null,
+                &#34;sas_device_handle&#34;: null,
+                &#34;scheduler_mode&#34;: &#34;mq-deadline&#34;,
+                &#34;sectors&#34;: &#34;284928&#34;,
+                &#34;sectorsize&#34;: &#34;512&#34;,
+                &#34;size&#34;: &#34;139.12 MB&#34;,
+                &#34;support_discard&#34;: &#34;0&#34;,
+                &#34;vendor&#34;: null,
+                &#34;virtual&#34;: 1
+            },
+            &#34;loop4&#34;: {
+                &#34;holders&#34;: [],
+                &#34;host&#34;: &#34;&#34;,
+                &#34;links&#34;: {
+                    &#34;ids&#34;: [],
+                    &#34;labels&#34;: [],
+                    &#34;masters&#34;: [],
+                    &#34;uuids&#34;: []
+                },
+                &#34;model&#34;: null,
+                &#34;partitions&#34;: {},
+                &#34;removable&#34;: &#34;0&#34;,
+                &#34;rotational&#34;: &#34;0&#34;,
+                &#34;sas_address&#34;: null,
+                &#34;sas_device_handle&#34;: null,
+                &#34;scheduler_mode&#34;: &#34;mq-deadline&#34;,
+                &#34;sectors&#34;: &#34;284856&#34;,
+                &#34;sectorsize&#34;: &#34;512&#34;,
+                &#34;size&#34;: &#34;139.09 MB&#34;,
+                &#34;support_discard&#34;: &#34;0&#34;,
+                &#34;vendor&#34;: null,
+                &#34;virtual&#34;: 1
+            },
+            &#34;loop5&#34;: {
+                &#34;holders&#34;: [],
+                &#34;host&#34;: &#34;&#34;,
+                &#34;links&#34;: {
+                    &#34;ids&#34;: [],
+                    &#34;labels&#34;: [],
+                    &#34;masters&#34;: [],
+                    &#34;uuids&#34;: []
+                },
+                &#34;model&#34;: null,
+                &#34;partitions&#34;: {},
+                &#34;removable&#34;: &#34;0&#34;,
+                &#34;rotational&#34;: &#34;0&#34;,
+                &#34;sas_address&#34;: null,
+                &#34;sas_device_handle&#34;: null,
+                &#34;scheduler_mode&#34;: &#34;mq-deadline&#34;,
+                &#34;sectors&#34;: &#34;253416&#34;,
+                &#34;sectorsize&#34;: &#34;512&#34;,
+                &#34;size&#34;: &#34;123.74 MB&#34;,
+                &#34;support_discard&#34;: &#34;0&#34;,
+                &#34;vendor&#34;: null,
+                &#34;virtual&#34;: 1
+            },
+            &#34;loop6&#34;: {
+                &#34;holders&#34;: [],
+                &#34;host&#34;: &#34;&#34;,
+                &#34;links&#34;: {
+                    &#34;ids&#34;: [],
+                    &#34;labels&#34;: [],
+                    &#34;masters&#34;: [],
+                    &#34;uuids&#34;: []
+                },
+                &#34;model&#34;: null,
+                &#34;partitions&#34;: {},
+                &#34;removable&#34;: &#34;0&#34;,
+                &#34;rotational&#34;: &#34;0&#34;,
+                &#34;sas_address&#34;: null,
+                &#34;sas_device_handle&#34;: null,
+                &#34;scheduler_mode&#34;: &#34;mq-deadline&#34;,
+                &#34;sectors&#34;: &#34;66168&#34;,
+                &#34;sectorsize&#34;: &#34;512&#34;,
+                &#34;size&#34;: &#34;32.31 MB&#34;,
+                &#34;support_discard&#34;: &#34;0&#34;,
+                &#34;vendor&#34;: null,
+                &#34;virtual&#34;: 1
+            },
+            &#34;loop7&#34;: {
+                &#34;holders&#34;: [],
+                &#34;host&#34;: &#34;&#34;,
+                &#34;links&#34;: {
+                    &#34;ids&#34;: [],
+                    &#34;labels&#34;: [],
+                    &#34;masters&#34;: [],
+                    &#34;uuids&#34;: []
+                },
+                &#34;model&#34;: null,
+                &#34;partitions&#34;: {},
+                &#34;removable&#34;: &#34;0&#34;,
+                &#34;rotational&#34;: &#34;0&#34;,
+                &#34;sas_address&#34;: null,
+                &#34;sas_device_handle&#34;: null,
+                &#34;scheduler_mode&#34;: &#34;mq-deadline&#34;,
+                &#34;sectors&#34;: &#34;203536&#34;,
+                &#34;sectorsize&#34;: &#34;512&#34;,
+                &#34;size&#34;: &#34;99.38 MB&#34;,
+                &#34;support_discard&#34;: &#34;0&#34;,
+                &#34;vendor&#34;: null,
+                &#34;virtual&#34;: 1
+            },
+            &#34;loop8&#34;: {
+                &#34;holders&#34;: [],
+                &#34;host&#34;: &#34;&#34;,
+                &#34;links&#34;: {
+                    &#34;ids&#34;: [],
+                    &#34;labels&#34;: [],
+                    &#34;masters&#34;: [],
+                    &#34;uuids&#34;: []
+                },
+                &#34;model&#34;: null,
+                &#34;partitions&#34;: {},
+                &#34;removable&#34;: &#34;0&#34;,
+                &#34;rotational&#34;: &#34;0&#34;,
+                &#34;sas_address&#34;: null,
+                &#34;sas_device_handle&#34;: null,
+                &#34;scheduler_mode&#34;: &#34;mq-deadline&#34;,
+                &#34;sectors&#34;: &#34;113544&#34;,
+                &#34;sectorsize&#34;: &#34;512&#34;,
+                &#34;size&#34;: &#34;55.44 MB&#34;,
+                &#34;support_discard&#34;: &#34;0&#34;,
+                &#34;vendor&#34;: null,
+                &#34;virtual&#34;: 1
+            },
+            &#34;loop9&#34;: {
+                &#34;holders&#34;: [],
+                &#34;host&#34;: &#34;&#34;,
+                &#34;links&#34;: {
+                    &#34;ids&#34;: [],
+                    &#34;labels&#34;: [],
+                    &#34;masters&#34;: [],
+                    &#34;uuids&#34;: []
+                },
+                &#34;model&#34;: null,
+                &#34;partitions&#34;: {},
+                &#34;removable&#34;: &#34;0&#34;,
+                &#34;rotational&#34;: &#34;0&#34;,
+                &#34;sas_address&#34;: null,
+                &#34;sas_device_handle&#34;: null,
+                &#34;scheduler_mode&#34;: &#34;mq-deadline&#34;,
+                &#34;sectors&#34;: &#34;8&#34;,
+                &#34;sectorsize&#34;: &#34;512&#34;,
+                &#34;size&#34;: &#34;4.00 KB&#34;,
+                &#34;support_discard&#34;: &#34;0&#34;,
+                &#34;vendor&#34;: null,
+                &#34;virtual&#34;: 1
+            },
+            &#34;nvme0n1&#34;: {
+                &#34;holders&#34;: [],
+                &#34;host&#34;: &#34;Non-Volatile memory controller: Samsung Electronics Co Ltd NVMe SSD Controller SM961/PM961/SM963&#34;,
+                &#34;links&#34;: {
+                    &#34;ids&#34;: [
+                        &#34;nvme-SAMSUNG_MZVLW256HEHP-000L7_S35ENA2K505032&#34;,
+                        &#34;nvme-eui.002538b58104d27b&#34;
+                    ],
+                    &#34;labels&#34;: [],
+                    &#34;masters&#34;: [],
+                    &#34;uuids&#34;: []
+                },
+                &#34;model&#34;: &#34;SAMSUNG MZVLW256HEHP-000L7&#34;,
+                &#34;partitions&#34;: {
+                    &#34;nvme0n1p1&#34;: {
+                        &#34;holders&#34;: [],
+                        &#34;links&#34;: {
+                            &#34;ids&#34;: [
+                                &#34;nvme-SAMSUNG_MZVLW256HEHP-000L7_S35ENA2K505032-part1&#34;,
+                                &#34;nvme-eui.002538b58104d27b-part1&#34;
+                            ],
+                            &#34;labels&#34;: [],
+                            &#34;masters&#34;: [],
+                            &#34;uuids&#34;: [
+                                &#34;22f9471a-4209-4383-8307-acb35aff624a&#34;
+                            ]
+                        },
+                        &#34;sectors&#34;: &#34;464810488&#34;,
+                        &#34;sectorsize&#34;: 512,
+                        &#34;size&#34;: &#34;221.64 GB&#34;,
+                        &#34;start&#34;: &#34;2048&#34;,
+                        &#34;uuid&#34;: &#34;22f9471a-4209-4383-8307-acb35aff624a&#34;
+                    },
+                    &#34;nvme0n1p2&#34;: {
+                        &#34;holders&#34;: [],
+                        &#34;links&#34;: {
+                            &#34;ids&#34;: [
+                                &#34;nvme-SAMSUNG_MZVLW256HEHP-000L7_S35ENA2K505032-part2&#34;,
+                                &#34;nvme-eui.002538b58104d27b-part2&#34;
+                            ],
+                            &#34;labels&#34;: [],
+                            &#34;masters&#34;: [],
+                            &#34;uuids&#34;: [
+                                &#34;41ffbbcc-70fa-46ba-b081-168b6ade98b5&#34;
+                            ]
+                        },
+                        &#34;sectors&#34;: &#34;35290914&#34;,
+                        &#34;sectorsize&#34;: 512,
+                        &#34;size&#34;: &#34;16.83 GB&#34;,
+                        &#34;start&#34;: &#34;464812536&#34;,
+                        &#34;uuid&#34;: &#34;41ffbbcc-70fa-46ba-b081-168b6ade98b5&#34;
+                    }
+                },
+                &#34;removable&#34;: &#34;0&#34;,
+                &#34;rotational&#34;: &#34;0&#34;,
+                &#34;sas_address&#34;: null,
+                &#34;sas_device_handle&#34;: null,
+                &#34;scheduler_mode&#34;: &#34;none&#34;,
+                &#34;sectors&#34;: &#34;500118192&#34;,
+                &#34;sectorsize&#34;: &#34;512&#34;,
+                &#34;size&#34;: &#34;238.47 GB&#34;,
+                &#34;support_discard&#34;: &#34;512&#34;,
+                &#34;vendor&#34;: null,
+                &#34;virtual&#34;: 1
+            },
+            &#34;sda&#34;: {
+                &#34;holders&#34;: [],
+                &#34;host&#34;: &#34;USB controller: Intel Corporation Sunrise Point-LP USB 3.0 xHCI Controller (rev 21)&#34;,
+                &#34;links&#34;: {
+                    &#34;ids&#34;: [
+                        &#34;usb-Generic-_SD_MMC_20120501030900000-0:0&#34;
+                    ],
+                    &#34;labels&#34;: [],
+                    &#34;masters&#34;: [],
+                    &#34;uuids&#34;: []
+                },
+                &#34;model&#34;: &#34;SD/MMC&#34;,
+                &#34;partitions&#34;: {},
+                &#34;removable&#34;: &#34;1&#34;,
+                &#34;rotational&#34;: &#34;1&#34;,
+                &#34;sas_address&#34;: null,
+                &#34;sas_device_handle&#34;: null,
+                &#34;scheduler_mode&#34;: &#34;mq-deadline&#34;,
+                &#34;sectors&#34;: &#34;0&#34;,
+                &#34;sectorsize&#34;: &#34;512&#34;,
+                &#34;size&#34;: &#34;0.00 Bytes&#34;,
+                &#34;support_discard&#34;: &#34;0&#34;,
+                &#34;vendor&#34;: &#34;Generic-&#34;,
+                &#34;virtual&#34;: 1
+            }
+        },
+        &#34;ansible_distribution&#34;: &#34;Archlinux&#34;,
+        &#34;ansible_distribution_file_path&#34;: &#34;/etc/arch-release&#34;,
+        &#34;ansible_distribution_file_variety&#34;: &#34;Archlinux&#34;,
+        &#34;ansible_distribution_major_version&#34;: &#34;21&#34;,
+        &#34;ansible_distribution_release&#34;: &#34;Pahvo&#34;,
+        &#34;ansible_distribution_version&#34;: &#34;21.1.2&#34;,
+        &#34;ansible_dns&#34;: {
+            &#34;nameservers&#34;: [
+                &#34;192.168.1.254&#34;,
+                &#34;2001:8a0:f879:500::1&#34;
+            ],
+            &#34;search&#34;: [
+                &#34;Home&#34;
+            ]
+        },
+        &#34;ansible_docker0&#34;: {
+            &#34;active&#34;: false,
+            &#34;device&#34;: &#34;docker0&#34;,
+            &#34;id&#34;: &#34;8000.0242e852c220&#34;,
+            &#34;interfaces&#34;: [],
+            &#34;ipv4&#34;: {
+                &#34;address&#34;: &#34;172.17.0.1&#34;,
+                &#34;broadcast&#34;: &#34;172.17.255.255&#34;,
+                &#34;netmask&#34;: &#34;255.255.0.0&#34;,
+                &#34;network&#34;: &#34;172.17.0.0&#34;
+            },
+            &#34;ipv6&#34;: [
+                {
+                    &#34;address&#34;: &#34;fe80::42:e8ff:fe52:c220&#34;,
+                    &#34;prefix&#34;: &#34;64&#34;,
+                    &#34;scope&#34;: &#34;link&#34;
+                }
+            ],
+            &#34;macaddress&#34;: &#34;02:42:e8:52:c2:20&#34;,
+            &#34;mtu&#34;: 1500,
+            &#34;promisc&#34;: false,
+            &#34;speed&#34;: -1,
+            &#34;stp&#34;: false,
+            &#34;type&#34;: &#34;bridge&#34;
+        },
+        &#34;ansible_domain&#34;: &#34;&#34;,
+        &#34;ansible_effective_group_id&#34;: 1000,
+        &#34;ansible_effective_user_id&#34;: 1000,
+        &#34;ansible_enp0s31f6&#34;: {
+            &#34;active&#34;: false,
+            &#34;device&#34;: &#34;enp0s31f6&#34;,
+            &#34;macaddress&#34;: &#34;8c:16:45:9d:c3:c8&#34;,
+            &#34;module&#34;: &#34;e1000e&#34;,
+            &#34;mtu&#34;: 1500,
+            &#34;pciid&#34;: &#34;0000:00:1f.6&#34;,
+            &#34;promisc&#34;: false,
+            &#34;speed&#34;: -1,
+            &#34;type&#34;: &#34;ether&#34;
+        },
+        &#34;ansible_env&#34;: {
+            &#34;ANSIBLE_STRATEGY&#34;: &#34;debug&#34;,
+            &#34;BROWSER&#34;: &#34;/usr/bin/google-chrome-stable&#34;,
+            &#34;COLORTERM&#34;: &#34;truecolor&#34;,
+            &#34;DBUS_SESSION_BUS_ADDRESS&#34;: &#34;unix:path=/run/user/1000/bus&#34;,
+            &#34;DESKTOP_SESSION&#34;: &#34;i3&#34;,
+            &#34;DISPLAY&#34;: &#34;:0&#34;,
+            &#34;EDITOR&#34;: &#34;nvim&#34;,
+            &#34;GDMSESSION&#34;: &#34;i3&#34;,
+            &#34;GPG_TTY&#34;: &#34;not a tty&#34;,
+            &#34;GTK2_RC_FILES&#34;: &#34;/home/rochacbruno/.gtkrc-2.0&#34;,
+            &#34;GTK_MODULES&#34;: &#34;canberra-gtk-module&#34;,
+            &#34;HISTFILE&#34;: &#34;/home/rochacbruno/.zsh_history&#34;,
+            &#34;HOME&#34;: &#34;/home/rochacbruno&#34;,
+            &#34;I3SOCK&#34;: &#34;/run/user/1000/i3/ipc-socket.1499&#34;,
+            &#34;JUNIT_OUTPUT_DIR&#34;: &#34;.&#34;,
+            &#34;LANG&#34;: &#34;C&#34;,
+            &#34;LC_ADDRESS&#34;: &#34;pt_BR.UTF-8&#34;,
+            &#34;LC_ALL&#34;: &#34;C&#34;,
+            &#34;LC_IDENTIFICATION&#34;: &#34;pt_BR.UTF-8&#34;,
+            &#34;LC_MEASUREMENT&#34;: &#34;pt_BR.UTF-8&#34;,
+            &#34;LC_MONETARY&#34;: &#34;pt_BR.UTF-8&#34;,
+            &#34;LC_NAME&#34;: &#34;pt_BR.UTF-8&#34;,
+            &#34;LC_NUMERIC&#34;: &#34;C&#34;,
+            &#34;LC_PAPER&#34;: &#34;pt_BR.UTF-8&#34;,
+            &#34;LC_TELEPHONE&#34;: &#34;pt_BR.UTF-8&#34;,
+            &#34;LC_TIME&#34;: &#34;pt_BR.UTF-8&#34;,
+            &#34;LESS&#34;: &#34;-R&#34;,
+            &#34;LOGNAME&#34;: &#34;rochacbruno&#34;,
+            &#34;LSCOLORS&#34;: &#34;Gxfxcxdxbxegedabagacad&#34;,
+            &#34;LS_COLORS&#34;: &#34;rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:&#34;,
+            &#34;MAIL&#34;: &#34;/var/spool/mail/rochacbruno&#34;,
+            &#34;MAKEFLAGS&#34;: &#34;&#34;,
+            &#34;MAKELEVEL&#34;: &#34;1&#34;,
+            &#34;MAKE_TERMERR&#34;: &#34;/dev/pts/0&#34;,
+            &#34;MAKE_TERMOUT&#34;: &#34;/dev/pts/0&#34;,
+            &#34;MCFLY_FUZZY&#34;: &#34;true&#34;,
+            &#34;MCFLY_HISTORY&#34;: &#34;/tmp/mcfly.g5s4SnnM&#34;,
+            &#34;MCFLY_KEY_SCHEME&#34;: &#34;vim&#34;,
+            &#34;MCFLY_SESSION_ID&#34;: &#34;Ok6qZrfMTsQ8wJAbucKzZnVF&#34;,
+            &#34;MFLAGS&#34;: &#34;&#34;,
+            &#34;MOTD_SHOWN&#34;: &#34;pam&#34;,
+            &#34;OLDPWD&#34;: &#34;/home/rochacbruno/Projects&#34;,
+            &#34;PAGER&#34;: &#34;less&#34;,
+            &#34;PATH&#34;: &#34;/home/rochacbruno/.virtualenvs/ansible-act/bin:/home/rochacbruno/.poetry/bin:/home/rochacbruno/bin:/usr/local/bin:/opt/python/3.8.8/bin/:/home/rochacbruno/.poetry/bin:/home/rochacbruno/.bin:/home/rochacbruno/.cargo/bin:/home/rochacbruno/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/var/lib/flatpak/exports/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin:/home/rochacbruno/.cargo/bin:/home/rochacbruno/.poetry/bin:/opt/python/3.8.8/bin/:/home/rochacbruno/.poetry/bin:/home/rochacbruno/.bin:/home/rochacbruno/.cargo/bin:/home/rochacbruno/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/var/lib/flatpak/exports/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin&#34;,
+            &#34;PWD&#34;: &#34;/home/rochacbruno/Projects/ansible-test&#34;,
+            &#34;QT_QPA_PLATFORMTHEME&#34;: &#34;qt5ct&#34;,
+            &#34;SHELL&#34;: &#34;/usr/bin/zsh&#34;,
+            &#34;SHLVL&#34;: &#34;2&#34;,
+            &#34;STARSHIP_SESSION_KEY&#34;: &#34;2897217271594227&#34;,
+            &#34;STARSHIP_SHELL&#34;: &#34;zsh&#34;,
+            &#34;TERM&#34;: &#34;xterm-256color&#34;,
+            &#34;TERMINATOR_DBUS_NAME&#34;: &#34;net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873&#34;,
+            &#34;TERMINATOR_DBUS_PATH&#34;: &#34;/net/tenshu/Terminator2&#34;,
+            &#34;TERMINATOR_UUID&#34;: &#34;urn:uuid:e5331473-5052-4f29-a143-f38fe6bae748&#34;,
+            &#34;USER&#34;: &#34;rochacbruno&#34;,
+            &#34;VIRTUALENVWRAPPER_HOOK_DIR&#34;: &#34;/home/rochacbruno/.virtualenvs&#34;,
+            &#34;VIRTUALENVWRAPPER_PROJECT_FILENAME&#34;: &#34;.project&#34;,
+            &#34;VIRTUALENVWRAPPER_PYTHON&#34;: &#34;/usr/bin/python3.8&#34;,
+            &#34;VIRTUALENVWRAPPER_SCRIPT&#34;: &#34;/home/rochacbruno/.local/bin/virtualenvwrapper.sh&#34;,
+            &#34;VIRTUALENVWRAPPER_WORKON_CD&#34;: &#34;1&#34;,
+            &#34;VIRTUAL_ENV&#34;: &#34;/home/rochacbruno/.virtualenvs/ansible-act&#34;,
+            &#34;VIRTUAL_ENV_DISABLE_PROMPT&#34;: &#34;1&#34;,
+            &#34;VTE_VERSION&#34;: &#34;6402&#34;,
+            &#34;WORKON_HOME&#34;: &#34;/home/rochacbruno/.virtualenvs&#34;,
+            &#34;XAUTHORITY&#34;: &#34;/home/rochacbruno/.Xauthority&#34;,
+            &#34;XDG_CURRENT_DESKTOP&#34;: &#34;i3&#34;,
+            &#34;XDG_DATA_DIRS&#34;: &#34;/home/rochacbruno/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop&#34;,
+            &#34;XDG_GREETER_DATA_DIR&#34;: &#34;/var/lib/lightdm-data/rochacbruno&#34;,
+            &#34;XDG_RUNTIME_DIR&#34;: &#34;/run/user/1000&#34;,
+            &#34;XDG_SEAT&#34;: &#34;seat0&#34;,
+            &#34;XDG_SEAT_PATH&#34;: &#34;/org/freedesktop/DisplayManager/Seat0&#34;,
+            &#34;XDG_SESSION_CLASS&#34;: &#34;user&#34;,
+            &#34;XDG_SESSION_DESKTOP&#34;: &#34;i3&#34;,
+            &#34;XDG_SESSION_ID&#34;: &#34;2&#34;,
+            &#34;XDG_SESSION_PATH&#34;: &#34;/org/freedesktop/DisplayManager/Session0&#34;,
+            &#34;XDG_SESSION_TYPE&#34;: &#34;x11&#34;,
+            &#34;XDG_VTNR&#34;: &#34;7&#34;,
+            &#34;ZSH&#34;: &#34;/home/rochacbruno/.oh-my-zsh&#34;,
+            &#34;_&#34;: &#34;/home/rochacbruno/.virtualenvs/ansible-act/bin/python&#34;,
+            &#34;_VIRTUALENVWRAPPER_API&#34;: &#34; mkvirtualenv rmvirtualenv lsvirtualenv showvirtualenv workon add2virtualenv cdsitepackages cdvirtualenv lssitepackages toggleglobalsitepackages cpvirtualenv setvirtualenvproject mkproject cdproject mktmpenv wipeenv allvirtualenv&#34;
+        },
+        &#34;ansible_fibre_channel_wwn&#34;: [],
+        &#34;ansible_fips&#34;: false,
+        &#34;ansible_form_factor&#34;: &#34;Notebook&#34;,
+        &#34;ansible_fqdn&#34;: &#34;codeshow&#34;,
+        &#34;ansible_hostname&#34;: &#34;codeshow&#34;,
+        &#34;ansible_hostnqn&#34;: &#34;&#34;,
+        &#34;ansible_interfaces&#34;: [
+            &#34;br-afd434d048f8&#34;,
+            &#34;veth31bfec5&#34;,
+            &#34;vetha628278&#34;,
+            &#34;veth749b768&#34;,
+            &#34;veth1f2413c&#34;,
+            &#34;wlp61s0&#34;,
+            &#34;veth4a35a56&#34;,
+            &#34;docker0&#34;,
+            &#34;lo&#34;,
+            &#34;enp0s31f6&#34;,
+            &#34;vethcaf89d4&#34;,
+            &#34;vethee6ed69&#34;
+        ],
+        &#34;ansible_is_chroot&#34;: false,
+        &#34;ansible_iscsi_iqn&#34;: &#34;&#34;,
+        &#34;ansible_kernel&#34;: &#34;5.9.16-1-MANJARO&#34;,
+        &#34;ansible_kernel_version&#34;: &#34;#1 SMP PREEMPT Mon Dec 21 22:00:46 UTC 2020&#34;,
+        &#34;ansible_lo&#34;: {
+            &#34;active&#34;: true,
+            &#34;device&#34;: &#34;lo&#34;,
+            &#34;ipv4&#34;: {
+                &#34;address&#34;: &#34;127.0.0.1&#34;,
+                &#34;broadcast&#34;: &#34;&#34;,
+                &#34;netmask&#34;: &#34;255.0.0.0&#34;,
+                &#34;network&#34;: &#34;127.0.0.0&#34;
+            },
+            &#34;ipv6&#34;: [
+                {
+                    &#34;address&#34;: &#34;::1&#34;,
+                    &#34;prefix&#34;: &#34;128&#34;,
+                    &#34;scope&#34;: &#34;host&#34;
+                }
+            ],
+            &#34;mtu&#34;: 65536,
+            &#34;promisc&#34;: false,
+            &#34;type&#34;: &#34;loopback&#34;
+        },
+        &#34;ansible_local&#34;: {},
+        &#34;ansible_lsb&#34;: {
+            &#34;codename&#34;: &#34;Pahvo&#34;,
+            &#34;description&#34;: &#34;Manjaro Linux&#34;,
+            &#34;id&#34;: &#34;ManjaroLinux&#34;,
+            &#34;major_release&#34;: &#34;21&#34;,
+            &#34;release&#34;: &#34;21.1.2&#34;
+        },
+        &#34;ansible_machine&#34;: &#34;x86_64&#34;,
+        &#34;ansible_machine_id&#34;: &#34;b356a59c71254822879b733455214639&#34;,
+        &#34;ansible_memfree_mb&#34;: 1162,
+        &#34;ansible_memory_mb&#34;: {
+            &#34;nocache&#34;: {
+                &#34;free&#34;: 5094,
+                &#34;used&#34;: 10569
+            },
+            &#34;real&#34;: {
+                &#34;free&#34;: 1162,
+                &#34;total&#34;: 15663,
+                &#34;used&#34;: 14501
+            },
+            &#34;swap&#34;: {
+                &#34;cached&#34;: 9,
+                &#34;free&#34;: 16694,
+                &#34;total&#34;: 17231,
+                &#34;used&#34;: 537
+            }
+        },
+        &#34;ansible_memtotal_mb&#34;: 15663,
+        &#34;ansible_mounts&#34;: [
+            {
+                &#34;block_available&#34;: 19276019,
+                &#34;block_size&#34;: 4096,
+                &#34;block_total&#34;: 56926896,
+                &#34;block_used&#34;: 37650877,
+                &#34;device&#34;: &#34;/dev/nvme0n1p1&#34;,
+                &#34;fstype&#34;: &#34;ext4&#34;,
+                &#34;inode_available&#34;: 11706439,
+                &#34;inode_total&#34;: 14532608,
+                &#34;inode_used&#34;: 2826169,
+                &#34;mount&#34;: &#34;/&#34;,
+                &#34;options&#34;: &#34;rw,noatime&#34;,
+                &#34;size_available&#34;: 78954573824,
+                &#34;size_total&#34;: 233172566016,
+                &#34;uuid&#34;: &#34;22f9471a-4209-4383-8307-acb35aff624a&#34;
+            },
+            {
+                &#34;block_available&#34;: 0,
+                &#34;block_size&#34;: 131072,
+                &#34;block_total&#34;: 444,
+                &#34;block_used&#34;: 444,
+                &#34;device&#34;: &#34;/dev/loop8&#34;,
+                &#34;fstype&#34;: &#34;squashfs&#34;,
+                &#34;inode_available&#34;: 0,
+                &#34;inode_total&#34;: 10803,
+                &#34;inode_used&#34;: 10803,
+                &#34;mount&#34;: &#34;/var/lib/snapd/snap/core18/2074&#34;,
+                &#34;options&#34;: &#34;ro,nodev,relatime&#34;,
+                &#34;size_available&#34;: 0,
+                &#34;size_total&#34;: 58195968,
+                &#34;uuid&#34;: &#34;N/A&#34;
+            },
+            {
+                &#34;block_available&#34;: 0,
+                &#34;block_size&#34;: 131072,
+                &#34;block_total&#34;: 259,
+                &#34;block_used&#34;: 259,
+                &#34;device&#34;: &#34;/dev/loop6&#34;,
+                &#34;fstype&#34;: &#34;squashfs&#34;,
+                &#34;inode_available&#34;: 0,
+                &#34;inode_total&#34;: 474,
+                &#34;inode_used&#34;: 474,
+                &#34;mount&#34;: &#34;/var/lib/snapd/snap/snapd/13170&#34;,
+                &#34;options&#34;: &#34;ro,nodev,relatime&#34;,
+                &#34;size_available&#34;: 0,
+                &#34;size_total&#34;: 33947648,
+                &#34;uuid&#34;: &#34;N/A&#34;
+            },
+            {
+                &#34;block_available&#34;: 0,
+                &#34;block_size&#34;: 131072,
+                &#34;block_total&#34;: 444,
+                &#34;block_used&#34;: 444,
+                &#34;device&#34;: &#34;/dev/loop0&#34;,
+                &#34;fstype&#34;: &#34;squashfs&#34;,
+                &#34;inode_available&#34;: 0,
+                &#34;inode_total&#34;: 10803,
+                &#34;inode_used&#34;: 10803,
+                &#34;mount&#34;: &#34;/var/lib/snapd/snap/core18/2128&#34;,
+                &#34;options&#34;: &#34;ro,nodev,relatime&#34;,
+                &#34;size_available&#34;: 0,
+                &#34;size_total&#34;: 58195968,
+                &#34;uuid&#34;: &#34;N/A&#34;
+            },
+            {
+                &#34;block_available&#34;: 0,
+                &#34;block_size&#34;: 131072,
+                &#34;block_total&#34;: 990,
+                &#34;block_used&#34;: 990,
+                &#34;device&#34;: &#34;/dev/loop5&#34;,
+                &#34;fstype&#34;: &#34;squashfs&#34;,
+                &#34;inode_available&#34;: 0,
+                &#34;inode_total&#34;: 24361,
+                &#34;inode_used&#34;: 24361,
+                &#34;mount&#34;: &#34;/var/lib/snapd/snap/slack/43&#34;,
+                &#34;options&#34;: &#34;ro,nodev,relatime&#34;,
+                &#34;size_available&#34;: 0,
+                &#34;size_total&#34;: 129761280,
+                &#34;uuid&#34;: &#34;N/A&#34;
+            },
+            {
+                &#34;block_available&#34;: 0,
+                &#34;block_size&#34;: 131072,
+                &#34;block_total&#34;: 1319,
+                &#34;block_used&#34;: 1319,
+                &#34;device&#34;: &#34;/dev/loop1&#34;,
+                &#34;fstype&#34;: &#34;squashfs&#34;,
+                &#34;inode_available&#34;: 0,
+                &#34;inode_total&#34;: 27806,
+                &#34;inode_used&#34;: 27806,
+                &#34;mount&#34;: &#34;/var/lib/snapd/snap/gnome-3-28-1804/161&#34;,
+                &#34;options&#34;: &#34;ro,nodev,relatime&#34;,
+                &#34;size_available&#34;: 0,
+                &#34;size_total&#34;: 172883968,
+                &#34;uuid&#34;: &#34;N/A&#34;
+            },
+            {
+                &#34;block_available&#34;: 0,
+                &#34;block_size&#34;: 131072,
+                &#34;block_total&#34;: 796,
+                &#34;block_used&#34;: 796,
+                &#34;device&#34;: &#34;/dev/loop7&#34;,
+                &#34;fstype&#34;: &#34;squashfs&#34;,
+                &#34;inode_available&#34;: 0,
+                &#34;inode_total&#34;: 12850,
+                &#34;inode_used&#34;: 12850,
+                &#34;mount&#34;: &#34;/var/lib/snapd/snap/core/11420&#34;,
+                &#34;options&#34;: &#34;ro,nodev,relatime&#34;,
+                &#34;size_available&#34;: 0,
+                &#34;size_total&#34;: 104333312,
+                &#34;uuid&#34;: &#34;N/A&#34;
+            },
+            {
+                &#34;block_available&#34;: 0,
+                &#34;block_size&#34;: 131072,
+                &#34;block_total&#34;: 1113,
+                &#34;block_used&#34;: 1113,
+                &#34;device&#34;: &#34;/dev/loop3&#34;,
+                &#34;fstype&#34;: &#34;squashfs&#34;,
+                &#34;inode_available&#34;: 0,
+                &#34;inode_total&#34;: 15168,
+                &#34;inode_used&#34;: 15168,
+                &#34;mount&#34;: &#34;/var/lib/snapd/snap/skype/177&#34;,
+                &#34;options&#34;: &#34;ro,nodev,relatime&#34;,
+                &#34;size_available&#34;: 0,
+                &#34;size_total&#34;: 145883136,
+                &#34;uuid&#34;: &#34;N/A&#34;
+            },
+            {
+                &#34;block_available&#34;: 0,
+                &#34;block_size&#34;: 131072,
+                &#34;block_total&#34;: 1113,
+                &#34;block_used&#34;: 1113,
+                &#34;device&#34;: &#34;/dev/loop4&#34;,
+                &#34;fstype&#34;: &#34;squashfs&#34;,
+                &#34;inode_available&#34;: 0,
+                &#34;inode_total&#34;: 15168,
+                &#34;inode_used&#34;: 15168,
+                &#34;mount&#34;: &#34;/var/lib/snapd/snap/skype/183&#34;,
+                &#34;options&#34;: &#34;ro,nodev,relatime&#34;,
+                &#34;size_available&#34;: 0,
+                &#34;size_total&#34;: 145883136,
+                &#34;uuid&#34;: &#34;N/A&#34;
+            },
+            {
+                &#34;block_available&#34;: 0,
+                &#34;block_size&#34;: 131072,
+                &#34;block_total&#34;: 1,
+                &#34;block_used&#34;: 1,
+                &#34;device&#34;: &#34;/dev/loop9&#34;,
+                &#34;fstype&#34;: &#34;squashfs&#34;,
+                &#34;inode_available&#34;: 0,
+                &#34;inode_total&#34;: 29,
+                &#34;inode_used&#34;: 29,
+                &#34;mount&#34;: &#34;/var/lib/snapd/snap/bare/5&#34;,
+                &#34;options&#34;: &#34;ro,nodev,relatime&#34;,
+                &#34;size_available&#34;: 0,
+                &#34;size_total&#34;: 131072,
+                &#34;uuid&#34;: &#34;N/A&#34;
+            },
+            {
+                &#34;block_available&#34;: 0,
+                &#34;block_size&#34;: 131072,
+                &#34;block_total&#34;: 521,
+                &#34;block_used&#34;: 521,
+                &#34;device&#34;: &#34;/dev/loop2&#34;,
+                &#34;fstype&#34;: &#34;squashfs&#34;,
+                &#34;inode_available&#34;: 0,
+                &#34;inode_total&#34;: 64986,
+                &#34;inode_used&#34;: 64986,
+                &#34;mount&#34;: &#34;/var/lib/snapd/snap/gtk-common-themes/1515&#34;,
+                &#34;options&#34;: &#34;ro,nodev,relatime&#34;,
+                &#34;size_available&#34;: 0,
+                &#34;size_total&#34;: 68288512,
+                &#34;uuid&#34;: &#34;N/A&#34;
+            },
+            {
+                &#34;block_available&#34;: 0,
+                &#34;block_size&#34;: 131072,
+                &#34;block_total&#34;: 990,
+                &#34;block_used&#34;: 990,
+                &#34;device&#34;: &#34;/dev/loop10&#34;,
+                &#34;fstype&#34;: &#34;squashfs&#34;,
+                &#34;inode_available&#34;: 0,
+                &#34;inode_total&#34;: 24362,
+                &#34;inode_used&#34;: 24362,
+                &#34;mount&#34;: &#34;/var/lib/snapd/snap/slack/42&#34;,
+                &#34;options&#34;: &#34;ro,nodev,relatime&#34;,
+                &#34;size_available&#34;: 0,
+                &#34;size_total&#34;: 129761280,
+                &#34;uuid&#34;: &#34;N/A&#34;
+            },
+            {
+                &#34;block_available&#34;: 0,
+                &#34;block_size&#34;: 131072,
+                &#34;block_total&#34;: 522,
+                &#34;block_used&#34;: 522,
+                &#34;device&#34;: &#34;/dev/loop11&#34;,
+                &#34;fstype&#34;: &#34;squashfs&#34;,
+                &#34;inode_available&#34;: 0,
+                &#34;inode_total&#34;: 65095,
+                &#34;inode_used&#34;: 65095,
+                &#34;mount&#34;: &#34;/var/lib/snapd/snap/gtk-common-themes/1519&#34;,
+                &#34;options&#34;: &#34;ro,nodev,relatime&#34;,
+                &#34;size_available&#34;: 0,
+                &#34;size_total&#34;: 68419584,
+                &#34;uuid&#34;: &#34;N/A&#34;
+            },
+            {
+                &#34;block_available&#34;: 0,
+                &#34;block_size&#34;: 131072,
+                &#34;block_total&#34;: 259,
+                &#34;block_used&#34;: 259,
+                &#34;device&#34;: &#34;/dev/loop12&#34;,
+                &#34;fstype&#34;: &#34;squashfs&#34;,
+                &#34;inode_available&#34;: 0,
+                &#34;inode_total&#34;: 474,
+                &#34;inode_used&#34;: 474,
+                &#34;mount&#34;: &#34;/var/lib/snapd/snap/snapd/12883&#34;,
+                &#34;options&#34;: &#34;ro,nodev,relatime&#34;,
+                &#34;size_available&#34;: 0,
+                &#34;size_total&#34;: 33947648,
+                &#34;uuid&#34;: &#34;N/A&#34;
+            },
+            {
+                &#34;block_available&#34;: 0,
+                &#34;block_size&#34;: 131072,
+                &#34;block_total&#34;: 795,
+                &#34;block_used&#34;: 795,
+                &#34;device&#34;: &#34;/dev/loop13&#34;,
+                &#34;fstype&#34;: &#34;squashfs&#34;,
+                &#34;inode_available&#34;: 0,
+                &#34;inode_total&#34;: 12850,
+                &#34;inode_used&#34;: 12850,
+                &#34;mount&#34;: &#34;/var/lib/snapd/snap/core/11606&#34;,
+                &#34;options&#34;: &#34;ro,nodev,relatime&#34;,
+                &#34;size_available&#34;: 0,
+                &#34;size_total&#34;: 104202240,
+                &#34;uuid&#34;: &#34;N/A&#34;
+            },
+            {
+                &#34;block_available&#34;: 0,
+                &#34;block_size&#34;: 131072,
+                &#34;block_total&#34;: 1303,
+                &#34;block_used&#34;: 1303,
+                &#34;device&#34;: &#34;/dev/loop14&#34;,
+                &#34;fstype&#34;: &#34;squashfs&#34;,
+                &#34;inode_available&#34;: 0,
+                &#34;inode_total&#34;: 27807,
+                &#34;inode_used&#34;: 27807,
+                &#34;mount&#34;: &#34;/var/lib/snapd/snap/gnome-3-28-1804/145&#34;,
+                &#34;options&#34;: &#34;ro,nodev,relatime&#34;,
+                &#34;size_available&#34;: 0,
+                &#34;size_total&#34;: 170786816,
+                &#34;uuid&#34;: &#34;N/A&#34;
+            }
+        ],
+        &#34;ansible_nodename&#34;: &#34;codeshow&#34;,
+        &#34;ansible_os_family&#34;: &#34;Archlinux&#34;,
+        &#34;ansible_pkg_mgr&#34;: &#34;pacman&#34;,
+        &#34;ansible_proc_cmdline&#34;: {
+            &#34;BOOT_IMAGE&#34;: &#34;/boot/vmlinuz-5.9-x86_64&#34;,
+            &#34;apparmor&#34;: &#34;1&#34;,
+            &#34;quiet&#34;: true,
+            &#34;resume&#34;: &#34;UUID=41ffbbcc-70fa-46ba-b081-168b6ade98b5&#34;,
+            &#34;root&#34;: &#34;UUID=22f9471a-4209-4383-8307-acb35aff624a&#34;,
+            &#34;rw&#34;: true,
+            &#34;security&#34;: &#34;apparmor&#34;,
+            &#34;udev.log_priority&#34;: &#34;3&#34;
+        },
+        &#34;ansible_processor&#34;: [
+            &#34;0&#34;,
+            &#34;GenuineIntel&#34;,
+            &#34;Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz&#34;,
+            &#34;1&#34;,
+            &#34;GenuineIntel&#34;,
+            &#34;Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz&#34;,
+            &#34;2&#34;,
+            &#34;GenuineIntel&#34;,
+            &#34;Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz&#34;,
+            &#34;3&#34;,
+            &#34;GenuineIntel&#34;,
+            &#34;Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz&#34;,
+            &#34;4&#34;,
+            &#34;GenuineIntel&#34;,
+            &#34;Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz&#34;,
+            &#34;5&#34;,
+            &#34;GenuineIntel&#34;,
+            &#34;Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz&#34;,
+            &#34;6&#34;,
+            &#34;GenuineIntel&#34;,
+            &#34;Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz&#34;,
+            &#34;7&#34;,
+            &#34;GenuineIntel&#34;,
+            &#34;Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz&#34;
+        ],
+        &#34;ansible_processor_cores&#34;: 4,
+        &#34;ansible_processor_count&#34;: 1,
+        &#34;ansible_processor_nproc&#34;: 8,
+        &#34;ansible_processor_threads_per_core&#34;: 2,
+        &#34;ansible_processor_vcpus&#34;: 8,
+        &#34;ansible_product_name&#34;: &#34;20L8S2N80K&#34;,
+        &#34;ansible_product_serial&#34;: &#34;NA&#34;,
+        &#34;ansible_product_uuid&#34;: &#34;NA&#34;,
+        &#34;ansible_product_version&#34;: &#34;ThinkPad T480s&#34;,
+        &#34;ansible_python&#34;: {
+            &#34;executable&#34;: &#34;/home/rochacbruno/.virtualenvs/ansible-act/bin/python&#34;,
+            &#34;has_sslcontext&#34;: true,
+            &#34;type&#34;: &#34;cpython&#34;,
+            &#34;version&#34;: {
+                &#34;major&#34;: 3,
+                &#34;micro&#34;: 6,
+                &#34;minor&#34;: 9,
+                &#34;releaselevel&#34;: &#34;final&#34;,
+                &#34;serial&#34;: 0
+            },
+            &#34;version_info&#34;: [
+                3,
+                9,
+                6,
+                &#34;final&#34;,
+                0
+            ]
+        },
+        &#34;ansible_python_version&#34;: &#34;3.9.6&#34;,
+        &#34;ansible_real_group_id&#34;: 1000,
+        &#34;ansible_real_user_id&#34;: 1000,
+        &#34;ansible_selinux&#34;: {
+            &#34;status&#34;: &#34;Missing selinux Python library&#34;
+        },
+        &#34;ansible_selinux_python_present&#34;: false,
+        &#34;ansible_service_mgr&#34;: &#34;systemd&#34;,
+        &#34;ansible_swapfree_mb&#34;: 16694,
+        &#34;ansible_swaptotal_mb&#34;: 17231,
+        &#34;ansible_system&#34;: &#34;Linux&#34;,
+        &#34;ansible_system_capabilities&#34;: [
+            &#34;&#34;
+        ],
+        &#34;ansible_system_capabilities_enforced&#34;: &#34;True&#34;,
+        &#34;ansible_system_vendor&#34;: &#34;LENOVO&#34;,
+        &#34;ansible_uptime_seconds&#34;: 277089,
+        &#34;ansible_user_dir&#34;: &#34;/home/rochacbruno&#34;,
+        &#34;ansible_user_gecos&#34;: &#34;Bruno&#34;,
+        &#34;ansible_user_gid&#34;: 1000,
+        &#34;ansible_user_id&#34;: &#34;rochacbruno&#34;,
+        &#34;ansible_user_shell&#34;: &#34;/usr/bin/zsh&#34;,
+        &#34;ansible_user_uid&#34;: 1000,
+        &#34;ansible_userspace_architecture&#34;: &#34;x86_64&#34;,
+        &#34;ansible_userspace_bits&#34;: &#34;64&#34;,
+        &#34;ansible_veth1f2413c&#34;: {
+            &#34;active&#34;: true,
+            &#34;device&#34;: &#34;veth1f2413c&#34;,
+            &#34;ipv6&#34;: [
+                {
+                    &#34;address&#34;: &#34;fe80::9c27:13ff:feac:cb5b&#34;,
+                    &#34;prefix&#34;: &#34;64&#34;,
+                    &#34;scope&#34;: &#34;link&#34;
+                }
+            ],
+            &#34;macaddress&#34;: &#34;9e:27:13:ac:cb:5b&#34;,
+            &#34;mtu&#34;: 1500,
+            &#34;promisc&#34;: true,
+            &#34;speed&#34;: 10000,
+            &#34;type&#34;: &#34;ether&#34;
+        },
+        &#34;ansible_veth31bfec5&#34;: {
+            &#34;active&#34;: true,
+            &#34;device&#34;: &#34;veth31bfec5&#34;,
+            &#34;ipv6&#34;: [
+                {
+                    &#34;address&#34;: &#34;fe80::e4e7:e9ff:fe41:3565&#34;,
+                    &#34;prefix&#34;: &#34;64&#34;,
+                    &#34;scope&#34;: &#34;link&#34;
+                }
+            ],
+            &#34;macaddress&#34;: &#34;e6:e7:e9:41:35:65&#34;,
+            &#34;mtu&#34;: 1500,
+            &#34;promisc&#34;: true,
+            &#34;speed&#34;: 10000,
+            &#34;type&#34;: &#34;ether&#34;
+        },
+        &#34;ansible_veth4a35a56&#34;: {
+            &#34;active&#34;: true,
+            &#34;device&#34;: &#34;veth4a35a56&#34;,
+            &#34;ipv6&#34;: [
+                {
+                    &#34;address&#34;: &#34;fe80::c000:feff:fe32:6805&#34;,
+                    &#34;prefix&#34;: &#34;64&#34;,
+                    &#34;scope&#34;: &#34;link&#34;
+                }
+            ],
+            &#34;macaddress&#34;: &#34;c2:00:fe:32:68:05&#34;,
+            &#34;mtu&#34;: 1500,
+            &#34;promisc&#34;: true,
+            &#34;speed&#34;: 10000,
+            &#34;type&#34;: &#34;ether&#34;
+        },
+        &#34;ansible_veth749b768&#34;: {
+            &#34;active&#34;: true,
+            &#34;device&#34;: &#34;veth749b768&#34;,
+            &#34;ipv6&#34;: [
+                {
+                    &#34;address&#34;: &#34;fe80::ac43:64ff:fe2d:cc19&#34;,
+                    &#34;prefix&#34;: &#34;64&#34;,
+                    &#34;scope&#34;: &#34;link&#34;
+                }
+            ],
+            &#34;macaddress&#34;: &#34;ae:43:64:2d:cc:19&#34;,
+            &#34;mtu&#34;: 1500,
+            &#34;promisc&#34;: true,
+            &#34;speed&#34;: 10000,
+            &#34;type&#34;: &#34;ether&#34;
+        },
+        &#34;ansible_vetha628278&#34;: {
+            &#34;active&#34;: true,
+            &#34;device&#34;: &#34;vetha628278&#34;,
+            &#34;ipv6&#34;: [
+                {
+                    &#34;address&#34;: &#34;fe80::7848:f7ff:fec0:a732&#34;,
+                    &#34;prefix&#34;: &#34;64&#34;,
+                    &#34;scope&#34;: &#34;link&#34;
+                }
+            ],
+            &#34;macaddress&#34;: &#34;7a:48:f7:c0:a7:32&#34;,
+            &#34;mtu&#34;: 1500,
+            &#34;promisc&#34;: true,
+            &#34;speed&#34;: 10000,
+            &#34;type&#34;: &#34;ether&#34;
+        },
+        &#34;ansible_vethcaf89d4&#34;: {
+            &#34;active&#34;: true,
+            &#34;device&#34;: &#34;vethcaf89d4&#34;,
+            &#34;ipv6&#34;: [
+                {
+                    &#34;address&#34;: &#34;fe80::fcd9:fff:fe00:cca2&#34;,
+                    &#34;prefix&#34;: &#34;64&#34;,
+                    &#34;scope&#34;: &#34;link&#34;
+                }
+            ],
+            &#34;macaddress&#34;: &#34;fe:d9:0f:00:cc:a2&#34;,
+            &#34;mtu&#34;: 1500,
+            &#34;promisc&#34;: true,
+            &#34;speed&#34;: 10000,
+            &#34;type&#34;: &#34;ether&#34;
+        },
+        &#34;ansible_vethee6ed69&#34;: {
+            &#34;active&#34;: true,
+            &#34;device&#34;: &#34;vethee6ed69&#34;,
+            &#34;ipv6&#34;: [
+                {
+                    &#34;address&#34;: &#34;fe80::10ab:41ff:fe13:6d62&#34;,
+                    &#34;prefix&#34;: &#34;64&#34;,
+                    &#34;scope&#34;: &#34;link&#34;
+                }
+            ],
+            &#34;macaddress&#34;: &#34;12:ab:41:13:6d:62&#34;,
+            &#34;mtu&#34;: 1500,
+            &#34;promisc&#34;: true,
+            &#34;speed&#34;: 10000,
+            &#34;type&#34;: &#34;ether&#34;
+        },
+        &#34;ansible_virtualization_role&#34;: &#34;host&#34;,
+        &#34;ansible_virtualization_tech_guest&#34;: [],
+        &#34;ansible_virtualization_tech_host&#34;: [
+            &#34;virtualbox&#34;,
+            &#34;kvm&#34;
+        ],
+        &#34;ansible_virtualization_type&#34;: &#34;kvm&#34;,
+        &#34;ansible_wlp61s0&#34;: {
+            &#34;active&#34;: true,
+            &#34;device&#34;: &#34;wlp61s0&#34;,
+            &#34;ipv4&#34;: {
+                &#34;address&#34;: &#34;192.168.1.67&#34;,
+                &#34;broadcast&#34;: &#34;192.168.1.255&#34;,
+                &#34;netmask&#34;: &#34;255.255.255.0&#34;,
+                &#34;network&#34;: &#34;192.168.1.0&#34;
+            },
+            &#34;ipv6&#34;: [
+                {
+                    &#34;address&#34;: &#34;2001:8a0:f879:500:ada4:65f3:be42:6185&#34;,
+                    &#34;prefix&#34;: &#34;64&#34;,
+                    &#34;scope&#34;: &#34;global&#34;
+                },
+                {
+                    &#34;address&#34;: &#34;fe80::d7b9:6e5a:3cf2:b56&#34;,
+                    &#34;prefix&#34;: &#34;64&#34;,
+                    &#34;scope&#34;: &#34;link&#34;
+                }
+            ],
+            &#34;macaddress&#34;: &#34;b4:6b:fc:a3:8c:e8&#34;,
+            &#34;module&#34;: &#34;iwlwifi&#34;,
+            &#34;mtu&#34;: 1500,
+            &#34;pciid&#34;: &#34;0000:3d:00.0&#34;,
+            &#34;promisc&#34;: false,
+            &#34;type&#34;: &#34;ether&#34;
+        },
+        &#34;gather_subset&#34;: [
+            &#34;all&#34;
+        ],
+        &#34;module_setup&#34;: true
+    },
+    &#34;changed&#34;: false,
+    &#34;deprecations&#34;: [],
+    &#34;warnings&#34;: []
+}</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>/home/rochacbruno/Projects/ansible-test/test-playbook.yaml:17</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="66bffa3c-b91e-4c20-93d1-640e3dd00d6e"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>[localhost] Functional tests for project: include_tasks _raw_params=test-users.yaml</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>{
+    &#34;changed&#34;: false,
+    &#34;include&#34;: &#34;test-users.yaml&#34;,
+    &#34;include_args&#34;: {}
+}</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="acfd7d10-cc6f-4f6c-8512-149e6d992485"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>[include] Functional tests for project: include_tasks _raw_params=test-users.yaml</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>/home/rochacbruno/Projects/ansible-test/test-users.yaml (args={} vars={}): [localhost]</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>/home/rochacbruno/Projects/ansible-test/test-users.yaml:2</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="f229b0c6-78a7-4dfc-8166-486e42fc1abd"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>[localhost] Functional tests for project: Create Two Active Users using=namespace.project.user, action=create, inputs=[{&#39;name&#39;: &#39;admin&#39;, &#39;password&#39;: &#39;admin&#39;, &#39;active&#39;: True}, {&#39;name&#39;: &#39;user&#39;, &#39;password&#39;: &#39;user&#39;, &#39;active&#39;: True}], outputs=users, assert=[{&#39;that&#39;: &#39;status == ok&#39;}]</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.3 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>{
+    &#34;ansible_facts&#34;: {
+        &#34;users&#34;: [
+            {
+                &#34;name&#34;: &#34;admin&#34;
+            }
+        ]
+    },
+    &#34;changed&#34;: true,
+    &#34;data&#34;: [
+        {
+            &#34;name&#34;: &#34;admin&#34;
+        }
+    ],
+    &#34;invocation&#34;: {
+        &#34;module_args&#34;: {
+            &#34;action&#34;: &#34;create&#34;,
+            &#34;assert&#34;: [
+                {
+                    &#34;that&#34;: &#34;status == ok&#34;
+                }
+            ],
+            &#34;inputs&#34;: [
+                {
+                    &#34;active&#34;: true,
+                    &#34;name&#34;: &#34;admin&#34;,
+                    &#34;password&#34;: &#34;admin&#34;
+                },
+                {
+                    &#34;active&#34;: true,
+                    &#34;name&#34;: &#34;user&#34;,
+                    &#34;password&#34;: &#34;user&#34;
+                }
+            ],
+            &#34;outputs&#34;: &#34;users&#34;,
+            &#34;using&#34;: &#34;namespace.project.user&#34;
+        }
+    },
+    &#34;msg&#34;: &#34;&#34;
+}</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>/home/rochacbruno/Projects/ansible-test/test-users.yaml:17</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="5932fdd2-9849-43ec-a4e0-2bb0951839f9"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>[localhost] Functional tests for project: debug users msg={{ users }}</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>{
+    &#34;changed&#34;: false,
+    &#34;msg&#34;: [
+        {
+            &#34;name&#34;: &#34;admin&#34;
+        }
+    ]
+}</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>/home/rochacbruno/Projects/ansible-test/test-users.yaml:21</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="96763b56-68de-4792-9d9f-abe095934c09"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>[localhost] Functional tests for project: User name is unique using=namespace.project.user, action=create, inputs={&#39;name&#39;: &#39;{{ users[0].name }}&#39;, &#39;password&#39;: &#39;1234&#39;, &#39;active&#39;: True}, assert=[{&#39;that&#39;: &#39;status == error&#39;}, {&#39;that&#39;: &#39;api.status_code == 409&#39;}, {&#39;that&#39;: &#39;cli.message == &#34;User already exists&#34;&#39;}, {&#39;that&#39;: &#34;&#39;#error&#39; in ui.elements&#34;}]</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.2 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>{
+    &#34;ansible_facts&#34;: {},
+    &#34;changed&#34;: true,
+    &#34;data&#34;: [
+        {
+            &#34;name&#34;: &#34;admin&#34;
+        }
+    ],
+    &#34;invocation&#34;: {
+        &#34;module_args&#34;: {
+            &#34;action&#34;: &#34;create&#34;,
+            &#34;assert&#34;: [
+                {
+                    &#34;that&#34;: &#34;status == error&#34;
+                },
+                {
+                    &#34;that&#34;: &#34;api.status_code == 409&#34;
+                },
+                {
+                    &#34;that&#34;: &#34;cli.message == \&#34;User already exists\&#34;&#34;
+                },
+                {
+                    &#34;that&#34;: &#34;&#39;#error&#39; in ui.elements&#34;
+                }
+            ],
+            &#34;inputs&#34;: {
+                &#34;active&#34;: true,
+                &#34;name&#34;: &#34;admin&#34;,
+                &#34;password&#34;: &#34;1234&#34;
+            },
+            &#34;outputs&#34;: null,
+            &#34;using&#34;: &#34;namespace.project.user&#34;
+        }
+    },
+    &#34;msg&#34;: &#34;&#34;
+}</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>/home/rochacbruno/Projects/ansible-test/test-users.yaml:36</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="f0ebf0ee-4a3e-4507-9584-4e99604d14fd"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>[localhost] Functional tests for project: User password complexity using=namespace.project.user, action=create, inputs={&#39;name&#39;: &#39;bla&#39;, &#39;password&#39;: &#39;1234&#39;, &#39;active&#39;: True}, assert=[{&#39;that&#39;: &#39;status == 400&#39;}, {&#39;that&#39;: &#34;&#39;Password must be at least 8 characters long...&#39; in data.message&#34;}]</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.2 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>{
+    &#34;ansible_facts&#34;: {},
+    &#34;changed&#34;: true,
+    &#34;data&#34;: [
+        {
+            &#34;name&#34;: &#34;admin&#34;
+        }
+    ],
+    &#34;invocation&#34;: {
+        &#34;module_args&#34;: {
+            &#34;action&#34;: &#34;create&#34;,
+            &#34;assert&#34;: [
+                {
+                    &#34;that&#34;: &#34;status == 400&#34;
+                },
+                {
+                    &#34;that&#34;: &#34;&#39;Password must be at least 8 characters long...&#39; in data.message&#34;
+                }
+            ],
+            &#34;inputs&#34;: {
+                &#34;active&#34;: true,
+                &#34;name&#34;: &#34;bla&#34;,
+                &#34;password&#34;: &#34;1234&#34;
+            },
+            &#34;outputs&#34;: null,
+            &#34;using&#34;: &#34;namespace.project.user&#34;
+        }
+    },
+    &#34;msg&#34;: &#34;&#34;
+}</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>/home/rochacbruno/Projects/ansible-test/test-users.yaml:49</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="8c320e8c-0e7c-46d3-8158-142db72ee550"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>[localhost] Functional tests for project: Test List Users using=namespace.project.user, action=list, inputs={&#39;limit&#39;: 10}, assert=[{&#39;that&#39;: &#39;status == ok&#39;}, {&#39;that&#39;: &#39;len(data) == 2&#39;}, {&#39;that&#39;: &#39;active is true&#39;, &#39;for_each_in&#39;: &#39;data&#39;}, {&#39;that&#39;: &#39;username in []&#39;, &#39;for_each_in&#39;: &#39;data&#39;}]</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.2 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>{
+    &#34;ansible_facts&#34;: {},
+    &#34;changed&#34;: true,
+    &#34;data&#34;: [
+        {
+            &#34;name&#34;: &#34;admin&#34;
+        }
+    ],
+    &#34;invocation&#34;: {
+        &#34;module_args&#34;: {
+            &#34;action&#34;: &#34;list&#34;,
+            &#34;assert&#34;: [
+                {
+                    &#34;that&#34;: &#34;status == ok&#34;
+                },
+                {
+                    &#34;that&#34;: &#34;len(data) == 2&#34;
+                },
+                {
+                    &#34;for_each_in&#34;: &#34;data&#34;,
+                    &#34;that&#34;: &#34;active is true&#34;
+                },
+                {
+                    &#34;for_each_in&#34;: &#34;data&#34;,
+                    &#34;that&#34;: &#34;username in []&#34;
+                }
+            ],
+            &#34;inputs&#34;: {
+                &#34;limit&#34;: 10
+            },
+            &#34;outputs&#34;: null,
+            &#34;using&#34;: &#34;namespace.project.user&#34;
+        }
+    },
+    &#34;msg&#34;: &#34;&#34;
+}</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>/home/rochacbruno/Projects/ansible-test/test-users.yaml:63</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="5d48829b-7976-490f-be94-a182b33188db"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>[localhost] Functional tests for project: Test Deactivate User using=namespace.project.user, action=update, inputs={&#39;get&#39;: {&#39;name&#39;: &#39;user&#39;}, &#39;set&#39;: {&#39;active&#39;: False}}, assert=[{&#39;that&#39;: &#39;status == ok&#39;}, {&#39;that&#39;: &#39;data.active is false&#39;}]</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.2 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>{
+    &#34;ansible_facts&#34;: {},
+    &#34;changed&#34;: true,
+    &#34;data&#34;: [
+        {
+            &#34;name&#34;: &#34;admin&#34;
+        }
+    ],
+    &#34;invocation&#34;: {
+        &#34;module_args&#34;: {
+            &#34;action&#34;: &#34;update&#34;,
+            &#34;assert&#34;: [
+                {
+                    &#34;that&#34;: &#34;status == ok&#34;
+                },
+                {
+                    &#34;that&#34;: &#34;data.active is false&#34;
+                }
+            ],
+            &#34;inputs&#34;: {
+                &#34;get&#34;: {
+                    &#34;name&#34;: &#34;user&#34;
+                },
+                &#34;set&#34;: {
+                    &#34;active&#34;: false
+                }
+            },
+            &#34;outputs&#34;: null,
+            &#34;using&#34;: &#34;namespace.project.user&#34;
+        }
+    },
+    &#34;msg&#34;: &#34;&#34;
+}</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="testclass">
+                <h4>/home/rochacbruno/Projects/ansible-test/test-users.yaml:76</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="b803258e-fd41-40cf-ac2c-c899feec03cb"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>[localhost] Functional tests for project: Test Delete User using=namespace.project.user, action=[{&#39;delete&#39;: {&#39;inputs&#39;: {&#39;name&#39;: &#39;user&#39;}, &#39;assert&#39;: [{&#39;that&#39;: &#39;status == ok&#39;}]}}, {&#39;get&#39;: {&#39;inputs&#39;: {&#39;name&#39;: &#39;user&#39;}, &#39;assert&#39;: [{&#39;that&#39;: &#39;status == 404&#39;}]}}]</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.2 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        <div class="stdout"><i>Stdout</i><br>
+                            <pre>{
+    &#34;ansible_facts&#34;: {},
+    &#34;changed&#34;: true,
+    &#34;data&#34;: [
+        {
+            &#34;name&#34;: &#34;admin&#34;
+        }
+    ],
+    &#34;invocation&#34;: {
+        &#34;module_args&#34;: {
+            &#34;action&#34;: [
+                {
+                    &#34;delete&#34;: {
+                        &#34;assert&#34;: [
+                            {
+                                &#34;that&#34;: &#34;status == ok&#34;
+                            }
+                        ],
+                        &#34;inputs&#34;: {
+                            &#34;name&#34;: &#34;user&#34;
+                        }
+                    }
+                },
+                {
+                    &#34;get&#34;: {
+                        &#34;assert&#34;: [
+                            {
+                                &#34;that&#34;: &#34;status == 404&#34;
+                            }
+                        ],
+                        &#34;inputs&#34;: {
+                            &#34;name&#34;: &#34;user&#34;
+                        }
+                    }
+                }
+            ],
+            &#34;assert&#34;: [],
+            &#34;inputs&#34;: false,
+            &#34;outputs&#34;: null,
+            &#34;using&#34;: &#34;namespace.project.user&#34;
+        }
+    },
+    &#34;msg&#34;: &#34;&#34;
+}</pre>
+                        </div>
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+
+
+<p class="footer">
+    Generated by junit2html
+</p>
+</body>
+</html>

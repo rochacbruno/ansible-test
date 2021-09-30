@@ -1,16 +1,17 @@
 ---
-- name: Test Users CRUD
+- name: Functional tests for project
   hosts: localhost
+  strategy: linear
   vars:
     test_matrix:
       - api:
-          token_action: galaxy.user.token
-          base_url: http://localhost:8000
+          token_action: namespace.project.user.token
+          base_url: http://localhost:8000/api
       - cli:
-          token_action: galaxy.user.token
+          token_action: namespace.project.user.token
           config: /path/to/galaxy.ini
       - ui:
-          base_url: http://localhost:8001/ui/
+          base_url: http://localhost:8001/ui
           driver: selenium-grid
   tasks:
     - include_tasks: test-users.yaml

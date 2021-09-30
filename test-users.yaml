@@ -1,80 +1,187 @@
 ---
+- name: Dummy Test
+  ansible.test.case:
+    using: namespace.project
+    actions:
+      - test.banana:
+          inputs: 
+            foo: bar
+          expect: dummy
+      - user.foo
+      - user.bar
+    expect: 
+      - foo == bar
+      - foo == bar
+
 - name: Create Two Active Users
   ansible.test.case:
-    using: galaxy.user
-    action: create
-    with:
-      - name: admin
-        password: admin
-        active: true
-      - name: user
-        password: user
-        active: true
-    register: users
-    assert:
-      - that: status == 200
+    using: namespace.project
+    actions:
+      - user.create:
+          inputs:
+            - name: admin
+              password: admin
+              active: true
+            - name: user
+              password: user
+              active: true
+          expect:
+            - result.status == ok
+      - user.update:
+          inputs:
+            get:
+              name: admin
+            set:
+              active: false
+          expect:
+            - result.status == ok
+            - result.data.active == false
+      - user.list:
+          title: Listing Created Users
+          outputs: users1
+          expect: result.status == ok      
+      - user.list:
+          title: Listing Created Users
+          outputs: users2
+          expect: result.status == ok
+      - user.refresh
+    export:
+      # users: result.actions[2].data + result.actions[3].data
+      users: users1 + users2
+    expect:
+      - result.status == ok
+      - result.data.users[0].name == admin
+      - result.actions[1].data.active == false
+      - result.actions['my-update'].data.active == false
+      - users == [admin, user]
 
-- name: User name is unique 
-  ansible.test.case:
-    using: galaxy.user
-    action: create
-    with:
-      name: "{{ users[0].name }}"
-      password: "{{ faux.gen_string }}"
-      active: true
-    assert:
-      - that: status == 409
+# - name: Update password of user
+#   ansible.test.case:
+#     using: namespace.project
+#     actions:
+#       - user.update:
+#           inputs:
+#             get:
+#               name: "{{ users[1] }}"
+#             set:
+#               password: "foo-bar"
+#           expect:
+#             - result.status == ok
+#     expect:
+#       - result.status == ok
 
-- name: User password complexity 
-  ansible.test.case:
-    using: galaxy.user
-    action: create
-    with:
-      name: "{{ faux.gen_string(5) }}"
-      password: "1234"
-      active: true
-    assert:
-      - that: status == 400
-      - that: "'Password must be at least 8 characters long...' in data.message"
+# - name: debug users
+#   debug:
+#     msg: "{{ users }}"
 
-- name: Test List Users
-  ansible.test.case:
-    using: galaxy.user
-    action: list
-    with:
-      limit: 10
-    assert:
-      - that: status == 200
-      - that: len(data) == 2
-      - that: active is true
-        for_each_in: data
-      - that: username in {{ users.values('name') }}
-        for_each_in: data
+# - name: User name is unique 
+#   ansible.test.case:
+#     using: namespace.project.user
+#     action: create
+#     inputs:
+#       name: "{{ users[0].name }}"
+#       password: "1234"
+#       # password: "{{ faux.gen_string(4) }}"
+#       active: true
+#     expect:
+#       - that: status == error
+#       - that: api.status_code == 409
+#       - that: cli.message == "User already exists"
+#       - that: "'#error' in ui.elements"
+#       - that: "${foo == bar}"
 
-- name: Test Deactivate User
-  ansible.test.case:
-    using: galaxy.user
-    action: update
-    with:
-      get: 
-        name: user
-      set:
-        active: false
-    assert:
-      - that: status == 200
-      - that: data.active is false
+# - name: User password complexity 
+#   ansible.test.case:
+#     using: namespace.project.user
+#     action: create
+#     inputs:
+#       # name: "{{ faux.gen_string(5) }}"
+#       name: "bla"
+#       password: "1234"
+#       active: true
+#     expect:
+#       - that: status == 400
+#       - that: "'Password must be at least 8 characters long...' in data.message"
 
-- name: Test Delete User
-  ansible.test.case:
-    using: galaxy.user
-    action: 
-      - delete:
-          with:
-            name: user
-          assert:
-            - that: status == 200
-      - get:
-          with:
-            name: user
-          assert:
-            - that: status == 404
+# - name: Test List Users
+#   ansible.test.case:
+#     using: namespace.project.user
+#     action: list
+#     inputs:
+#       limit: 10
+#     expect:
+#       - that: status == ok
+#       - that: len(data) == 2
+#       - that: active is true
+#         for_each_in: data
+#       - that: username in []
+#         for_each_in: data
+
+# - name: Test Deactivate User
+#   ansible.test.case:
+#     using: namespace.project.user
+#     action: update
+#     inputs:
+#       get: 
+#         name: user
+#       set:
+#         active: false
+#     expect:
+#       - that: status == ok
+#       - that: data.active is false
+
+# - name: Test Delete User
+#   ansible.test.case:
+#     using: namespace.project.user
+#     action: 
+#       - delete:
+#           inputs:
+#             name: user
+#           expect:
+#             - that: status == ok
+#       - get:
+#           inputs:
+#             name: user
+#           expect:
+#             - that: status == 404
+
+
+# - name: Test Delete User
+#   ansible.test.case:
+#     using: namespace.project.user
+#     actions:
+#       - delete:
+#           inputs:
+#             name: user
+#           expect:
+#             - status == ok
+#       - get:
+#           inputs:
+#             name: user
+#           expect:
+#             - status == error
+#     expect:
+#       - status:
+#           equals: ok
+#       - status:
+#           notequals: error
+#       - api.status:
+#           any:
+#             - greater: 200
+#             - less: 300
+
+
+# - name: Test Delete User
+#   ansible.test.case:
+#     using: namespace.project.user
+#     actions:
+#       - delete:
+#           inputs:
+#             name: user
+#           expect:
+#             - status == ok
+#       - get:
+#           inputs:
+#             name: user
+#           expect:
+#             - status == error

@@ -1,0 +1,1388 @@
+<?xml version="1.0" ?>
+<testsuites disabled="0" errors="1" failures="0" tests="5" time="1.5622999668121338">
+	<testsuite disabled="0" errors="1" failures="0" name="test-playbook" skipped="0" tests="5" time="1.5622999668121338">
+		<testcase name="[localhost] Functional tests for project: Gathering Facts gather_subset=['all'], gather_timeout=10" time="1.000264" classname="/home/rochacbruno/Projects/ansible-test/test-playbook.yaml:2">
+			<system-out>{
+    &quot;ansible_facts&quot;: {
+        &quot;ansible_all_ipv4_addresses&quot;: [
+            &quot;172.17.0.1&quot;,
+            &quot;192.168.1.67&quot;,
+            &quot;172.20.0.1&quot;
+        ],
+        &quot;ansible_all_ipv6_addresses&quot;: [
+            &quot;fe80::42:e8ff:fe52:c220&quot;,
+            &quot;2001:8a0:f879:500:ada4:65f3:be42:6185&quot;,
+            &quot;fe80::d7b9:6e5a:3cf2:b56&quot;,
+            &quot;fe80::42:16ff:feec:ec28&quot;,
+            &quot;fe80::e4e7:e9ff:fe41:3565&quot;,
+            &quot;fe80::10ab:41ff:fe13:6d62&quot;,
+            &quot;fe80::fcd9:fff:fe00:cca2&quot;,
+            &quot;fe80::c000:feff:fe32:6805&quot;,
+            &quot;fe80::7848:f7ff:fec0:a732&quot;,
+            &quot;fe80::ac43:64ff:fe2d:cc19&quot;,
+            &quot;fe80::9c27:13ff:feac:cb5b&quot;
+        ],
+        &quot;ansible_apparmor&quot;: {
+            &quot;status&quot;: &quot;enabled&quot;
+        },
+        &quot;ansible_architecture&quot;: &quot;x86_64&quot;,
+        &quot;ansible_bios_date&quot;: &quot;05/22/2018&quot;,
+        &quot;ansible_bios_vendor&quot;: &quot;LENOVO&quot;,
+        &quot;ansible_bios_version&quot;: &quot;N22ET37W (1.14 )&quot;,
+        &quot;ansible_board_asset_tag&quot;: &quot;Not Available&quot;,
+        &quot;ansible_board_name&quot;: &quot;20L8S2N80K&quot;,
+        &quot;ansible_board_serial&quot;: &quot;NA&quot;,
+        &quot;ansible_board_vendor&quot;: &quot;LENOVO&quot;,
+        &quot;ansible_board_version&quot;: &quot;Not Defined&quot;,
+        &quot;ansible_br_afd434d048f8&quot;: {
+            &quot;active&quot;: true,
+            &quot;device&quot;: &quot;br-afd434d048f8&quot;,
+            &quot;id&quot;: &quot;8000.024216ecec28&quot;,
+            &quot;interfaces&quot;: [
+                &quot;vethcaf89d4&quot;,
+                &quot;veth4a35a56&quot;,
+                &quot;vetha628278&quot;,
+                &quot;veth749b768&quot;,
+                &quot;veth1f2413c&quot;,
+                &quot;veth31bfec5&quot;,
+                &quot;vethee6ed69&quot;
+            ],
+            &quot;ipv4&quot;: {
+                &quot;address&quot;: &quot;172.20.0.1&quot;,
+                &quot;broadcast&quot;: &quot;172.20.255.255&quot;,
+                &quot;netmask&quot;: &quot;255.255.0.0&quot;,
+                &quot;network&quot;: &quot;172.20.0.0&quot;
+            },
+            &quot;ipv6&quot;: [
+                {
+                    &quot;address&quot;: &quot;fe80::42:16ff:feec:ec28&quot;,
+                    &quot;prefix&quot;: &quot;64&quot;,
+                    &quot;scope&quot;: &quot;link&quot;
+                }
+            ],
+            &quot;macaddress&quot;: &quot;02:42:16:ec:ec:28&quot;,
+            &quot;mtu&quot;: 1500,
+            &quot;promisc&quot;: false,
+            &quot;speed&quot;: 10000,
+            &quot;stp&quot;: false,
+            &quot;type&quot;: &quot;bridge&quot;
+        },
+        &quot;ansible_chassis_asset_tag&quot;: &quot;RH0019978&quot;,
+        &quot;ansible_chassis_serial&quot;: &quot;NA&quot;,
+        &quot;ansible_chassis_vendor&quot;: &quot;LENOVO&quot;,
+        &quot;ansible_chassis_version&quot;: &quot;None&quot;,
+        &quot;ansible_cmdline&quot;: {
+            &quot;BOOT_IMAGE&quot;: &quot;/boot/vmlinuz-5.9-x86_64&quot;,
+            &quot;apparmor&quot;: &quot;1&quot;,
+            &quot;quiet&quot;: true,
+            &quot;resume&quot;: &quot;UUID=41ffbbcc-70fa-46ba-b081-168b6ade98b5&quot;,
+            &quot;root&quot;: &quot;UUID=22f9471a-4209-4383-8307-acb35aff624a&quot;,
+            &quot;rw&quot;: true,
+            &quot;security&quot;: &quot;apparmor&quot;,
+            &quot;udev.log_priority&quot;: &quot;3&quot;
+        },
+        &quot;ansible_date_time&quot;: {
+            &quot;date&quot;: &quot;2021-09-30&quot;,
+            &quot;day&quot;: &quot;30&quot;,
+            &quot;epoch&quot;: &quot;1633019842&quot;,
+            &quot;hour&quot;: &quot;17&quot;,
+            &quot;iso8601&quot;: &quot;2021-09-30T16:37:22Z&quot;,
+            &quot;iso8601_basic&quot;: &quot;20210930T173722407612&quot;,
+            &quot;iso8601_basic_short&quot;: &quot;20210930T173722&quot;,
+            &quot;iso8601_micro&quot;: &quot;2021-09-30T16:37:22.407612Z&quot;,
+            &quot;minute&quot;: &quot;37&quot;,
+            &quot;month&quot;: &quot;09&quot;,
+            &quot;second&quot;: &quot;22&quot;,
+            &quot;time&quot;: &quot;17:37:22&quot;,
+            &quot;tz&quot;: &quot;WEST&quot;,
+            &quot;tz_dst&quot;: &quot;WEST&quot;,
+            &quot;tz_offset&quot;: &quot;+0100&quot;,
+            &quot;weekday&quot;: &quot;quinta&quot;,
+            &quot;weekday_number&quot;: &quot;4&quot;,
+            &quot;weeknumber&quot;: &quot;39&quot;,
+            &quot;year&quot;: &quot;2021&quot;
+        },
+        &quot;ansible_default_ipv4&quot;: {
+            &quot;address&quot;: &quot;192.168.1.67&quot;,
+            &quot;alias&quot;: &quot;wlp61s0&quot;,
+            &quot;broadcast&quot;: &quot;192.168.1.255&quot;,
+            &quot;gateway&quot;: &quot;192.168.1.254&quot;,
+            &quot;interface&quot;: &quot;wlp61s0&quot;,
+            &quot;macaddress&quot;: &quot;b4:6b:fc:a3:8c:e8&quot;,
+            &quot;mtu&quot;: 1500,
+            &quot;netmask&quot;: &quot;255.255.255.0&quot;,
+            &quot;network&quot;: &quot;192.168.1.0&quot;,
+            &quot;type&quot;: &quot;ether&quot;
+        },
+        &quot;ansible_default_ipv6&quot;: {
+            &quot;address&quot;: &quot;2001:8a0:f879:500:ada4:65f3:be42:6185&quot;,
+            &quot;gateway&quot;: &quot;fe80::206:91ff:fe73:85df&quot;,
+            &quot;interface&quot;: &quot;wlp61s0&quot;,
+            &quot;macaddress&quot;: &quot;b4:6b:fc:a3:8c:e8&quot;,
+            &quot;mtu&quot;: 1500,
+            &quot;prefix&quot;: &quot;64&quot;,
+            &quot;scope&quot;: &quot;global&quot;,
+            &quot;type&quot;: &quot;ether&quot;
+        },
+        &quot;ansible_device_links&quot;: {
+            &quot;ids&quot;: {
+                &quot;nvme0n1&quot;: [
+                    &quot;nvme-SAMSUNG_MZVLW256HEHP-000L7_S35ENA2K505032&quot;,
+                    &quot;nvme-eui.002538b58104d27b&quot;
+                ],
+                &quot;nvme0n1p1&quot;: [
+                    &quot;nvme-SAMSUNG_MZVLW256HEHP-000L7_S35ENA2K505032-part1&quot;,
+                    &quot;nvme-eui.002538b58104d27b-part1&quot;
+                ],
+                &quot;nvme0n1p2&quot;: [
+                    &quot;nvme-SAMSUNG_MZVLW256HEHP-000L7_S35ENA2K505032-part2&quot;,
+                    &quot;nvme-eui.002538b58104d27b-part2&quot;
+                ],
+                &quot;sda&quot;: [
+                    &quot;usb-Generic-_SD_MMC_20120501030900000-0:0&quot;
+                ]
+            },
+            &quot;labels&quot;: {},
+            &quot;masters&quot;: {},
+            &quot;uuids&quot;: {
+                &quot;nvme0n1p1&quot;: [
+                    &quot;22f9471a-4209-4383-8307-acb35aff624a&quot;
+                ],
+                &quot;nvme0n1p2&quot;: [
+                    &quot;41ffbbcc-70fa-46ba-b081-168b6ade98b5&quot;
+                ]
+            }
+        },
+        &quot;ansible_devices&quot;: {
+            &quot;loop0&quot;: {
+                &quot;holders&quot;: [],
+                &quot;host&quot;: &quot;&quot;,
+                &quot;links&quot;: {
+                    &quot;ids&quot;: [],
+                    &quot;labels&quot;: [],
+                    &quot;masters&quot;: [],
+                    &quot;uuids&quot;: []
+                },
+                &quot;model&quot;: null,
+                &quot;partitions&quot;: {},
+                &quot;removable&quot;: &quot;0&quot;,
+                &quot;rotational&quot;: &quot;0&quot;,
+                &quot;sas_address&quot;: null,
+                &quot;sas_device_handle&quot;: null,
+                &quot;scheduler_mode&quot;: &quot;mq-deadline&quot;,
+                &quot;sectors&quot;: &quot;113536&quot;,
+                &quot;sectorsize&quot;: &quot;512&quot;,
+                &quot;size&quot;: &quot;55.44 MB&quot;,
+                &quot;support_discard&quot;: &quot;0&quot;,
+                &quot;vendor&quot;: null,
+                &quot;virtual&quot;: 1
+            },
+            &quot;loop1&quot;: {
+                &quot;holders&quot;: [],
+                &quot;host&quot;: &quot;&quot;,
+                &quot;links&quot;: {
+                    &quot;ids&quot;: [],
+                    &quot;labels&quot;: [],
+                    &quot;masters&quot;: [],
+                    &quot;uuids&quot;: []
+                },
+                &quot;model&quot;: null,
+                &quot;partitions&quot;: {},
+                &quot;removable&quot;: &quot;0&quot;,
+                &quot;rotational&quot;: &quot;0&quot;,
+                &quot;sas_address&quot;: null,
+                &quot;sas_device_handle&quot;: null,
+                &quot;scheduler_mode&quot;: &quot;mq-deadline&quot;,
+                &quot;sectors&quot;: &quot;337424&quot;,
+                &quot;sectorsize&quot;: &quot;512&quot;,
+                &quot;size&quot;: &quot;164.76 MB&quot;,
+                &quot;support_discard&quot;: &quot;0&quot;,
+                &quot;vendor&quot;: null,
+                &quot;virtual&quot;: 1
+            },
+            &quot;loop10&quot;: {
+                &quot;holders&quot;: [],
+                &quot;host&quot;: &quot;&quot;,
+                &quot;links&quot;: {
+                    &quot;ids&quot;: [],
+                    &quot;labels&quot;: [],
+                    &quot;masters&quot;: [],
+                    &quot;uuids&quot;: []
+                },
+                &quot;model&quot;: null,
+                &quot;partitions&quot;: {},
+                &quot;removable&quot;: &quot;0&quot;,
+                &quot;rotational&quot;: &quot;0&quot;,
+                &quot;sas_address&quot;: null,
+                &quot;sas_device_handle&quot;: null,
+                &quot;scheduler_mode&quot;: &quot;mq-deadline&quot;,
+                &quot;sectors&quot;: &quot;253432&quot;,
+                &quot;sectorsize&quot;: &quot;512&quot;,
+                &quot;size&quot;: &quot;123.75 MB&quot;,
+                &quot;support_discard&quot;: &quot;0&quot;,
+                &quot;vendor&quot;: null,
+                &quot;virtual&quot;: 1
+            },
+            &quot;loop11&quot;: {
+                &quot;holders&quot;: [],
+                &quot;host&quot;: &quot;&quot;,
+                &quot;links&quot;: {
+                    &quot;ids&quot;: [],
+                    &quot;labels&quot;: [],
+                    &quot;masters&quot;: [],
+                    &quot;uuids&quot;: []
+                },
+                &quot;model&quot;: null,
+                &quot;partitions&quot;: {},
+                &quot;removable&quot;: &quot;0&quot;,
+                &quot;rotational&quot;: &quot;0&quot;,
+                &quot;sas_address&quot;: null,
+                &quot;sas_device_handle&quot;: null,
+                &quot;scheduler_mode&quot;: &quot;mq-deadline&quot;,
+                &quot;sectors&quot;: &quot;133552&quot;,
+                &quot;sectorsize&quot;: &quot;512&quot;,
+                &quot;size&quot;: &quot;65.21 MB&quot;,
+                &quot;support_discard&quot;: &quot;0&quot;,
+                &quot;vendor&quot;: null,
+                &quot;virtual&quot;: 1
+            },
+            &quot;loop12&quot;: {
+                &quot;holders&quot;: [],
+                &quot;host&quot;: &quot;&quot;,
+                &quot;links&quot;: {
+                    &quot;ids&quot;: [],
+                    &quot;labels&quot;: [],
+                    &quot;masters&quot;: [],
+                    &quot;uuids&quot;: []
+                },
+                &quot;model&quot;: null,
+                &quot;partitions&quot;: {},
+                &quot;removable&quot;: &quot;0&quot;,
+                &quot;rotational&quot;: &quot;0&quot;,
+                &quot;sas_address&quot;: null,
+                &quot;sas_device_handle&quot;: null,
+                &quot;scheduler_mode&quot;: &quot;mq-deadline&quot;,
+                &quot;sectors&quot;: &quot;66152&quot;,
+                &quot;sectorsize&quot;: &quot;512&quot;,
+                &quot;size&quot;: &quot;32.30 MB&quot;,
+                &quot;support_discard&quot;: &quot;0&quot;,
+                &quot;vendor&quot;: null,
+                &quot;virtual&quot;: 1
+            },
+            &quot;loop13&quot;: {
+                &quot;holders&quot;: [],
+                &quot;host&quot;: &quot;&quot;,
+                &quot;links&quot;: {
+                    &quot;ids&quot;: [],
+                    &quot;labels&quot;: [],
+                    &quot;masters&quot;: [],
+                    &quot;uuids&quot;: []
+                },
+                &quot;model&quot;: null,
+                &quot;partitions&quot;: {},
+                &quot;removable&quot;: &quot;0&quot;,
+                &quot;rotational&quot;: &quot;0&quot;,
+                &quot;sas_address&quot;: null,
+                &quot;sas_device_handle&quot;: null,
+                &quot;scheduler_mode&quot;: &quot;mq-deadline&quot;,
+                &quot;sectors&quot;: &quot;203456&quot;,
+                &quot;sectorsize&quot;: &quot;512&quot;,
+                &quot;size&quot;: &quot;99.34 MB&quot;,
+                &quot;support_discard&quot;: &quot;0&quot;,
+                &quot;vendor&quot;: null,
+                &quot;virtual&quot;: 1
+            },
+            &quot;loop14&quot;: {
+                &quot;holders&quot;: [],
+                &quot;host&quot;: &quot;&quot;,
+                &quot;links&quot;: {
+                    &quot;ids&quot;: [],
+                    &quot;labels&quot;: [],
+                    &quot;masters&quot;: [],
+                    &quot;uuids&quot;: []
+                },
+                &quot;model&quot;: null,
+                &quot;partitions&quot;: {},
+                &quot;removable&quot;: &quot;0&quot;,
+                &quot;rotational&quot;: &quot;0&quot;,
+                &quot;sas_address&quot;: null,
+                &quot;sas_device_handle&quot;: null,
+                &quot;scheduler_mode&quot;: &quot;mq-deadline&quot;,
+                &quot;sectors&quot;: &quot;333552&quot;,
+                &quot;sectorsize&quot;: &quot;512&quot;,
+                &quot;size&quot;: &quot;162.87 MB&quot;,
+                &quot;support_discard&quot;: &quot;0&quot;,
+                &quot;vendor&quot;: null,
+                &quot;virtual&quot;: 1
+            },
+            &quot;loop15&quot;: {
+                &quot;holders&quot;: [],
+                &quot;host&quot;: &quot;&quot;,
+                &quot;links&quot;: {
+                    &quot;ids&quot;: [],
+                    &quot;labels&quot;: [],
+                    &quot;masters&quot;: [],
+                    &quot;uuids&quot;: []
+                },
+                &quot;model&quot;: null,
+                &quot;partitions&quot;: {},
+                &quot;removable&quot;: &quot;0&quot;,
+                &quot;rotational&quot;: &quot;0&quot;,
+                &quot;sas_address&quot;: null,
+                &quot;sas_device_handle&quot;: null,
+                &quot;scheduler_mode&quot;: &quot;mq-deadline&quot;,
+                &quot;sectors&quot;: &quot;203424&quot;,
+                &quot;sectorsize&quot;: &quot;512&quot;,
+                &quot;size&quot;: &quot;99.33 MB&quot;,
+                &quot;support_discard&quot;: &quot;0&quot;,
+                &quot;vendor&quot;: null,
+                &quot;virtual&quot;: 1
+            },
+            &quot;loop2&quot;: {
+                &quot;holders&quot;: [],
+                &quot;host&quot;: &quot;&quot;,
+                &quot;links&quot;: {
+                    &quot;ids&quot;: [],
+                    &quot;labels&quot;: [],
+                    &quot;masters&quot;: [],
+                    &quot;uuids&quot;: []
+                },
+                &quot;model&quot;: null,
+                &quot;partitions&quot;: {},
+                &quot;removable&quot;: &quot;0&quot;,
+                &quot;rotational&quot;: &quot;0&quot;,
+                &quot;sas_address&quot;: null,
+                &quot;sas_device_handle&quot;: null,
+                &quot;scheduler_mode&quot;: &quot;mq-deadline&quot;,
+                &quot;sectors&quot;: &quot;133320&quot;,
+                &quot;sectorsize&quot;: &quot;512&quot;,
+                &quot;size&quot;: &quot;65.10 MB&quot;,
+                &quot;support_discard&quot;: &quot;0&quot;,
+                &quot;vendor&quot;: null,
+                &quot;virtual&quot;: 1
+            },
+            &quot;loop3&quot;: {
+                &quot;holders&quot;: [],
+                &quot;host&quot;: &quot;&quot;,
+                &quot;links&quot;: {
+                    &quot;ids&quot;: [],
+                    &quot;labels&quot;: [],
+                    &quot;masters&quot;: [],
+                    &quot;uuids&quot;: []
+                },
+                &quot;model&quot;: null,
+                &quot;partitions&quot;: {},
+                &quot;removable&quot;: &quot;0&quot;,
+                &quot;rotational&quot;: &quot;0&quot;,
+                &quot;sas_address&quot;: null,
+                &quot;sas_device_handle&quot;: null,
+                &quot;scheduler_mode&quot;: &quot;mq-deadline&quot;,
+                &quot;sectors&quot;: &quot;284928&quot;,
+                &quot;sectorsize&quot;: &quot;512&quot;,
+                &quot;size&quot;: &quot;139.12 MB&quot;,
+                &quot;support_discard&quot;: &quot;0&quot;,
+                &quot;vendor&quot;: null,
+                &quot;virtual&quot;: 1
+            },
+            &quot;loop4&quot;: {
+                &quot;holders&quot;: [],
+                &quot;host&quot;: &quot;&quot;,
+                &quot;links&quot;: {
+                    &quot;ids&quot;: [],
+                    &quot;labels&quot;: [],
+                    &quot;masters&quot;: [],
+                    &quot;uuids&quot;: []
+                },
+                &quot;model&quot;: null,
+                &quot;partitions&quot;: {},
+                &quot;removable&quot;: &quot;0&quot;,
+                &quot;rotational&quot;: &quot;0&quot;,
+                &quot;sas_address&quot;: null,
+                &quot;sas_device_handle&quot;: null,
+                &quot;scheduler_mode&quot;: &quot;mq-deadline&quot;,
+                &quot;sectors&quot;: &quot;284856&quot;,
+                &quot;sectorsize&quot;: &quot;512&quot;,
+                &quot;size&quot;: &quot;139.09 MB&quot;,
+                &quot;support_discard&quot;: &quot;0&quot;,
+                &quot;vendor&quot;: null,
+                &quot;virtual&quot;: 1
+            },
+            &quot;loop5&quot;: {
+                &quot;holders&quot;: [],
+                &quot;host&quot;: &quot;&quot;,
+                &quot;links&quot;: {
+                    &quot;ids&quot;: [],
+                    &quot;labels&quot;: [],
+                    &quot;masters&quot;: [],
+                    &quot;uuids&quot;: []
+                },
+                &quot;model&quot;: null,
+                &quot;partitions&quot;: {},
+                &quot;removable&quot;: &quot;0&quot;,
+                &quot;rotational&quot;: &quot;0&quot;,
+                &quot;sas_address&quot;: null,
+                &quot;sas_device_handle&quot;: null,
+                &quot;scheduler_mode&quot;: &quot;mq-deadline&quot;,
+                &quot;sectors&quot;: &quot;253416&quot;,
+                &quot;sectorsize&quot;: &quot;512&quot;,
+                &quot;size&quot;: &quot;123.74 MB&quot;,
+                &quot;support_discard&quot;: &quot;0&quot;,
+                &quot;vendor&quot;: null,
+                &quot;virtual&quot;: 1
+            },
+            &quot;loop6&quot;: {
+                &quot;holders&quot;: [],
+                &quot;host&quot;: &quot;&quot;,
+                &quot;links&quot;: {
+                    &quot;ids&quot;: [],
+                    &quot;labels&quot;: [],
+                    &quot;masters&quot;: [],
+                    &quot;uuids&quot;: []
+                },
+                &quot;model&quot;: null,
+                &quot;partitions&quot;: {},
+                &quot;removable&quot;: &quot;0&quot;,
+                &quot;rotational&quot;: &quot;0&quot;,
+                &quot;sas_address&quot;: null,
+                &quot;sas_device_handle&quot;: null,
+                &quot;scheduler_mode&quot;: &quot;mq-deadline&quot;,
+                &quot;sectors&quot;: &quot;66168&quot;,
+                &quot;sectorsize&quot;: &quot;512&quot;,
+                &quot;size&quot;: &quot;32.31 MB&quot;,
+                &quot;support_discard&quot;: &quot;0&quot;,
+                &quot;vendor&quot;: null,
+                &quot;virtual&quot;: 1
+            },
+            &quot;loop7&quot;: {
+                &quot;holders&quot;: [],
+                &quot;host&quot;: &quot;&quot;,
+                &quot;links&quot;: {
+                    &quot;ids&quot;: [],
+                    &quot;labels&quot;: [],
+                    &quot;masters&quot;: [],
+                    &quot;uuids&quot;: []
+                },
+                &quot;model&quot;: null,
+                &quot;partitions&quot;: {},
+                &quot;removable&quot;: &quot;0&quot;,
+                &quot;rotational&quot;: &quot;0&quot;,
+                &quot;sas_address&quot;: null,
+                &quot;sas_device_handle&quot;: null,
+                &quot;scheduler_mode&quot;: &quot;mq-deadline&quot;,
+                &quot;sectors&quot;: &quot;0&quot;,
+                &quot;sectorsize&quot;: &quot;512&quot;,
+                &quot;size&quot;: &quot;0.00 Bytes&quot;,
+                &quot;support_discard&quot;: &quot;0&quot;,
+                &quot;vendor&quot;: null,
+                &quot;virtual&quot;: 1
+            },
+            &quot;loop8&quot;: {
+                &quot;holders&quot;: [],
+                &quot;host&quot;: &quot;&quot;,
+                &quot;links&quot;: {
+                    &quot;ids&quot;: [],
+                    &quot;labels&quot;: [],
+                    &quot;masters&quot;: [],
+                    &quot;uuids&quot;: []
+                },
+                &quot;model&quot;: null,
+                &quot;partitions&quot;: {},
+                &quot;removable&quot;: &quot;0&quot;,
+                &quot;rotational&quot;: &quot;0&quot;,
+                &quot;sas_address&quot;: null,
+                &quot;sas_device_handle&quot;: null,
+                &quot;scheduler_mode&quot;: &quot;mq-deadline&quot;,
+                &quot;sectors&quot;: &quot;113544&quot;,
+                &quot;sectorsize&quot;: &quot;512&quot;,
+                &quot;size&quot;: &quot;55.44 MB&quot;,
+                &quot;support_discard&quot;: &quot;0&quot;,
+                &quot;vendor&quot;: null,
+                &quot;virtual&quot;: 1
+            },
+            &quot;loop9&quot;: {
+                &quot;holders&quot;: [],
+                &quot;host&quot;: &quot;&quot;,
+                &quot;links&quot;: {
+                    &quot;ids&quot;: [],
+                    &quot;labels&quot;: [],
+                    &quot;masters&quot;: [],
+                    &quot;uuids&quot;: []
+                },
+                &quot;model&quot;: null,
+                &quot;partitions&quot;: {},
+                &quot;removable&quot;: &quot;0&quot;,
+                &quot;rotational&quot;: &quot;0&quot;,
+                &quot;sas_address&quot;: null,
+                &quot;sas_device_handle&quot;: null,
+                &quot;scheduler_mode&quot;: &quot;mq-deadline&quot;,
+                &quot;sectors&quot;: &quot;8&quot;,
+                &quot;sectorsize&quot;: &quot;512&quot;,
+                &quot;size&quot;: &quot;4.00 KB&quot;,
+                &quot;support_discard&quot;: &quot;0&quot;,
+                &quot;vendor&quot;: null,
+                &quot;virtual&quot;: 1
+            },
+            &quot;nvme0n1&quot;: {
+                &quot;holders&quot;: [],
+                &quot;host&quot;: &quot;Non-Volatile memory controller: Samsung Electronics Co Ltd NVMe SSD Controller SM961/PM961/SM963&quot;,
+                &quot;links&quot;: {
+                    &quot;ids&quot;: [
+                        &quot;nvme-SAMSUNG_MZVLW256HEHP-000L7_S35ENA2K505032&quot;,
+                        &quot;nvme-eui.002538b58104d27b&quot;
+                    ],
+                    &quot;labels&quot;: [],
+                    &quot;masters&quot;: [],
+                    &quot;uuids&quot;: []
+                },
+                &quot;model&quot;: &quot;SAMSUNG MZVLW256HEHP-000L7&quot;,
+                &quot;partitions&quot;: {
+                    &quot;nvme0n1p1&quot;: {
+                        &quot;holders&quot;: [],
+                        &quot;links&quot;: {
+                            &quot;ids&quot;: [
+                                &quot;nvme-SAMSUNG_MZVLW256HEHP-000L7_S35ENA2K505032-part1&quot;,
+                                &quot;nvme-eui.002538b58104d27b-part1&quot;
+                            ],
+                            &quot;labels&quot;: [],
+                            &quot;masters&quot;: [],
+                            &quot;uuids&quot;: [
+                                &quot;22f9471a-4209-4383-8307-acb35aff624a&quot;
+                            ]
+                        },
+                        &quot;sectors&quot;: &quot;464810488&quot;,
+                        &quot;sectorsize&quot;: 512,
+                        &quot;size&quot;: &quot;221.64 GB&quot;,
+                        &quot;start&quot;: &quot;2048&quot;,
+                        &quot;uuid&quot;: &quot;22f9471a-4209-4383-8307-acb35aff624a&quot;
+                    },
+                    &quot;nvme0n1p2&quot;: {
+                        &quot;holders&quot;: [],
+                        &quot;links&quot;: {
+                            &quot;ids&quot;: [
+                                &quot;nvme-SAMSUNG_MZVLW256HEHP-000L7_S35ENA2K505032-part2&quot;,
+                                &quot;nvme-eui.002538b58104d27b-part2&quot;
+                            ],
+                            &quot;labels&quot;: [],
+                            &quot;masters&quot;: [],
+                            &quot;uuids&quot;: [
+                                &quot;41ffbbcc-70fa-46ba-b081-168b6ade98b5&quot;
+                            ]
+                        },
+                        &quot;sectors&quot;: &quot;35290914&quot;,
+                        &quot;sectorsize&quot;: 512,
+                        &quot;size&quot;: &quot;16.83 GB&quot;,
+                        &quot;start&quot;: &quot;464812536&quot;,
+                        &quot;uuid&quot;: &quot;41ffbbcc-70fa-46ba-b081-168b6ade98b5&quot;
+                    }
+                },
+                &quot;removable&quot;: &quot;0&quot;,
+                &quot;rotational&quot;: &quot;0&quot;,
+                &quot;sas_address&quot;: null,
+                &quot;sas_device_handle&quot;: null,
+                &quot;scheduler_mode&quot;: &quot;none&quot;,
+                &quot;sectors&quot;: &quot;500118192&quot;,
+                &quot;sectorsize&quot;: &quot;512&quot;,
+                &quot;size&quot;: &quot;238.47 GB&quot;,
+                &quot;support_discard&quot;: &quot;512&quot;,
+                &quot;vendor&quot;: null,
+                &quot;virtual&quot;: 1
+            },
+            &quot;sda&quot;: {
+                &quot;holders&quot;: [],
+                &quot;host&quot;: &quot;USB controller: Intel Corporation Sunrise Point-LP USB 3.0 xHCI Controller (rev 21)&quot;,
+                &quot;links&quot;: {
+                    &quot;ids&quot;: [
+                        &quot;usb-Generic-_SD_MMC_20120501030900000-0:0&quot;
+                    ],
+                    &quot;labels&quot;: [],
+                    &quot;masters&quot;: [],
+                    &quot;uuids&quot;: []
+                },
+                &quot;model&quot;: &quot;SD/MMC&quot;,
+                &quot;partitions&quot;: {},
+                &quot;removable&quot;: &quot;1&quot;,
+                &quot;rotational&quot;: &quot;1&quot;,
+                &quot;sas_address&quot;: null,
+                &quot;sas_device_handle&quot;: null,
+                &quot;scheduler_mode&quot;: &quot;mq-deadline&quot;,
+                &quot;sectors&quot;: &quot;0&quot;,
+                &quot;sectorsize&quot;: &quot;512&quot;,
+                &quot;size&quot;: &quot;0.00 Bytes&quot;,
+                &quot;support_discard&quot;: &quot;0&quot;,
+                &quot;vendor&quot;: &quot;Generic-&quot;,
+                &quot;virtual&quot;: 1
+            }
+        },
+        &quot;ansible_distribution&quot;: &quot;Archlinux&quot;,
+        &quot;ansible_distribution_file_path&quot;: &quot;/etc/arch-release&quot;,
+        &quot;ansible_distribution_file_variety&quot;: &quot;Archlinux&quot;,
+        &quot;ansible_distribution_major_version&quot;: &quot;21&quot;,
+        &quot;ansible_distribution_release&quot;: &quot;Pahvo&quot;,
+        &quot;ansible_distribution_version&quot;: &quot;21.1.2&quot;,
+        &quot;ansible_dns&quot;: {
+            &quot;nameservers&quot;: [
+                &quot;192.168.1.254&quot;,
+                &quot;2001:8a0:f879:500::1&quot;
+            ],
+            &quot;search&quot;: [
+                &quot;Home&quot;
+            ]
+        },
+        &quot;ansible_docker0&quot;: {
+            &quot;active&quot;: false,
+            &quot;device&quot;: &quot;docker0&quot;,
+            &quot;id&quot;: &quot;8000.0242e852c220&quot;,
+            &quot;interfaces&quot;: [],
+            &quot;ipv4&quot;: {
+                &quot;address&quot;: &quot;172.17.0.1&quot;,
+                &quot;broadcast&quot;: &quot;172.17.255.255&quot;,
+                &quot;netmask&quot;: &quot;255.255.0.0&quot;,
+                &quot;network&quot;: &quot;172.17.0.0&quot;
+            },
+            &quot;ipv6&quot;: [
+                {
+                    &quot;address&quot;: &quot;fe80::42:e8ff:fe52:c220&quot;,
+                    &quot;prefix&quot;: &quot;64&quot;,
+                    &quot;scope&quot;: &quot;link&quot;
+                }
+            ],
+            &quot;macaddress&quot;: &quot;02:42:e8:52:c2:20&quot;,
+            &quot;mtu&quot;: 1500,
+            &quot;promisc&quot;: false,
+            &quot;speed&quot;: -1,
+            &quot;stp&quot;: false,
+            &quot;type&quot;: &quot;bridge&quot;
+        },
+        &quot;ansible_domain&quot;: &quot;&quot;,
+        &quot;ansible_effective_group_id&quot;: 1000,
+        &quot;ansible_effective_user_id&quot;: 1000,
+        &quot;ansible_enp0s31f6&quot;: {
+            &quot;active&quot;: false,
+            &quot;device&quot;: &quot;enp0s31f6&quot;,
+            &quot;macaddress&quot;: &quot;8c:16:45:9d:c3:c8&quot;,
+            &quot;module&quot;: &quot;e1000e&quot;,
+            &quot;mtu&quot;: 1500,
+            &quot;pciid&quot;: &quot;0000:00:1f.6&quot;,
+            &quot;promisc&quot;: false,
+            &quot;speed&quot;: -1,
+            &quot;type&quot;: &quot;ether&quot;
+        },
+        &quot;ansible_env&quot;: {
+            &quot;ANSIBLE_STRATEGY&quot;: &quot;debug&quot;,
+            &quot;BROWSER&quot;: &quot;/usr/bin/google-chrome-stable&quot;,
+            &quot;COLORTERM&quot;: &quot;truecolor&quot;,
+            &quot;DBUS_SESSION_BUS_ADDRESS&quot;: &quot;unix:path=/run/user/1000/bus&quot;,
+            &quot;DESKTOP_SESSION&quot;: &quot;i3&quot;,
+            &quot;DISPLAY&quot;: &quot;:0&quot;,
+            &quot;EDITOR&quot;: &quot;nvim&quot;,
+            &quot;GDMSESSION&quot;: &quot;i3&quot;,
+            &quot;GPG_TTY&quot;: &quot;not a tty&quot;,
+            &quot;GTK2_RC_FILES&quot;: &quot;/home/rochacbruno/.gtkrc-2.0&quot;,
+            &quot;GTK_MODULES&quot;: &quot;canberra-gtk-module&quot;,
+            &quot;HISTFILE&quot;: &quot;/home/rochacbruno/.zsh_history&quot;,
+            &quot;HOME&quot;: &quot;/home/rochacbruno&quot;,
+            &quot;I3SOCK&quot;: &quot;/run/user/1000/i3/ipc-socket.1499&quot;,
+            &quot;JUNIT_OUTPUT_DIR&quot;: &quot;./junit&quot;,
+            &quot;LANG&quot;: &quot;C&quot;,
+            &quot;LC_ADDRESS&quot;: &quot;pt_BR.UTF-8&quot;,
+            &quot;LC_ALL&quot;: &quot;C&quot;,
+            &quot;LC_IDENTIFICATION&quot;: &quot;pt_BR.UTF-8&quot;,
+            &quot;LC_MEASUREMENT&quot;: &quot;pt_BR.UTF-8&quot;,
+            &quot;LC_MONETARY&quot;: &quot;pt_BR.UTF-8&quot;,
+            &quot;LC_NAME&quot;: &quot;pt_BR.UTF-8&quot;,
+            &quot;LC_NUMERIC&quot;: &quot;C&quot;,
+            &quot;LC_PAPER&quot;: &quot;pt_BR.UTF-8&quot;,
+            &quot;LC_TELEPHONE&quot;: &quot;pt_BR.UTF-8&quot;,
+            &quot;LC_TIME&quot;: &quot;pt_BR.UTF-8&quot;,
+            &quot;LESS&quot;: &quot;-R&quot;,
+            &quot;LOGNAME&quot;: &quot;rochacbruno&quot;,
+            &quot;LSCOLORS&quot;: &quot;Gxfxcxdxbxegedabagacad&quot;,
+            &quot;LS_COLORS&quot;: &quot;rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:&quot;,
+            &quot;MAIL&quot;: &quot;/var/spool/mail/rochacbruno&quot;,
+            &quot;MAKEFLAGS&quot;: &quot;&quot;,
+            &quot;MAKELEVEL&quot;: &quot;1&quot;,
+            &quot;MAKE_TERMERR&quot;: &quot;/dev/pts/0&quot;,
+            &quot;MAKE_TERMOUT&quot;: &quot;/dev/pts/0&quot;,
+            &quot;MCFLY_FUZZY&quot;: &quot;true&quot;,
+            &quot;MCFLY_HISTORY&quot;: &quot;/tmp/mcfly.INU6fOeI&quot;,
+            &quot;MCFLY_KEY_SCHEME&quot;: &quot;vim&quot;,
+            &quot;MCFLY_SESSION_ID&quot;: &quot;Ok6qZrfMTsQ8wJAbucKzZnVF&quot;,
+            &quot;MFLAGS&quot;: &quot;&quot;,
+            &quot;MOTD_SHOWN&quot;: &quot;pam&quot;,
+            &quot;OLDPWD&quot;: &quot;/home/rochacbruno/Projects&quot;,
+            &quot;PAGER&quot;: &quot;less&quot;,
+            &quot;PATH&quot;: &quot;/home/rochacbruno/.virtualenvs/ansible-act/bin:/home/rochacbruno/.poetry/bin:/home/rochacbruno/bin:/usr/local/bin:/opt/python/3.8.8/bin/:/home/rochacbruno/.poetry/bin:/home/rochacbruno/.bin:/home/rochacbruno/.cargo/bin:/home/rochacbruno/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/var/lib/flatpak/exports/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin:/home/rochacbruno/.cargo/bin:/home/rochacbruno/.poetry/bin:/opt/python/3.8.8/bin/:/home/rochacbruno/.poetry/bin:/home/rochacbruno/.bin:/home/rochacbruno/.cargo/bin:/home/rochacbruno/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/var/lib/flatpak/exports/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin&quot;,
+            &quot;PWD&quot;: &quot;/home/rochacbruno/Projects/ansible-test&quot;,
+            &quot;QT_QPA_PLATFORMTHEME&quot;: &quot;qt5ct&quot;,
+            &quot;SHELL&quot;: &quot;/usr/bin/zsh&quot;,
+            &quot;SHLVL&quot;: &quot;2&quot;,
+            &quot;STARSHIP_SESSION_KEY&quot;: &quot;2897217271594227&quot;,
+            &quot;STARSHIP_SHELL&quot;: &quot;zsh&quot;,
+            &quot;TERM&quot;: &quot;xterm-256color&quot;,
+            &quot;TERMINATOR_DBUS_NAME&quot;: &quot;net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873&quot;,
+            &quot;TERMINATOR_DBUS_PATH&quot;: &quot;/net/tenshu/Terminator2&quot;,
+            &quot;TERMINATOR_UUID&quot;: &quot;urn:uuid:e5331473-5052-4f29-a143-f38fe6bae748&quot;,
+            &quot;USER&quot;: &quot;rochacbruno&quot;,
+            &quot;VIRTUALENVWRAPPER_HOOK_DIR&quot;: &quot;/home/rochacbruno/.virtualenvs&quot;,
+            &quot;VIRTUALENVWRAPPER_PROJECT_FILENAME&quot;: &quot;.project&quot;,
+            &quot;VIRTUALENVWRAPPER_PYTHON&quot;: &quot;/usr/bin/python3.8&quot;,
+            &quot;VIRTUALENVWRAPPER_SCRIPT&quot;: &quot;/home/rochacbruno/.local/bin/virtualenvwrapper.sh&quot;,
+            &quot;VIRTUALENVWRAPPER_WORKON_CD&quot;: &quot;1&quot;,
+            &quot;VIRTUAL_ENV&quot;: &quot;/home/rochacbruno/.virtualenvs/ansible-act&quot;,
+            &quot;VIRTUAL_ENV_DISABLE_PROMPT&quot;: &quot;1&quot;,
+            &quot;VTE_VERSION&quot;: &quot;6402&quot;,
+            &quot;WORKON_HOME&quot;: &quot;/home/rochacbruno/.virtualenvs&quot;,
+            &quot;XAUTHORITY&quot;: &quot;/home/rochacbruno/.Xauthority&quot;,
+            &quot;XDG_CURRENT_DESKTOP&quot;: &quot;i3&quot;,
+            &quot;XDG_DATA_DIRS&quot;: &quot;/home/rochacbruno/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop&quot;,
+            &quot;XDG_GREETER_DATA_DIR&quot;: &quot;/var/lib/lightdm-data/rochacbruno&quot;,
+            &quot;XDG_RUNTIME_DIR&quot;: &quot;/run/user/1000&quot;,
+            &quot;XDG_SEAT&quot;: &quot;seat0&quot;,
+            &quot;XDG_SEAT_PATH&quot;: &quot;/org/freedesktop/DisplayManager/Seat0&quot;,
+            &quot;XDG_SESSION_CLASS&quot;: &quot;user&quot;,
+            &quot;XDG_SESSION_DESKTOP&quot;: &quot;i3&quot;,
+            &quot;XDG_SESSION_ID&quot;: &quot;2&quot;,
+            &quot;XDG_SESSION_PATH&quot;: &quot;/org/freedesktop/DisplayManager/Session0&quot;,
+            &quot;XDG_SESSION_TYPE&quot;: &quot;x11&quot;,
+            &quot;XDG_VTNR&quot;: &quot;7&quot;,
+            &quot;ZSH&quot;: &quot;/home/rochacbruno/.oh-my-zsh&quot;,
+            &quot;_&quot;: &quot;/home/rochacbruno/.virtualenvs/ansible-act/bin/python&quot;,
+            &quot;_VIRTUALENVWRAPPER_API&quot;: &quot; mkvirtualenv rmvirtualenv lsvirtualenv showvirtualenv workon add2virtualenv cdsitepackages cdvirtualenv lssitepackages toggleglobalsitepackages cpvirtualenv setvirtualenvproject mkproject cdproject mktmpenv wipeenv allvirtualenv&quot;
+        },
+        &quot;ansible_fibre_channel_wwn&quot;: [],
+        &quot;ansible_fips&quot;: false,
+        &quot;ansible_form_factor&quot;: &quot;Notebook&quot;,
+        &quot;ansible_fqdn&quot;: &quot;codeshow&quot;,
+        &quot;ansible_hostname&quot;: &quot;codeshow&quot;,
+        &quot;ansible_hostnqn&quot;: &quot;&quot;,
+        &quot;ansible_interfaces&quot;: [
+            &quot;vethcaf89d4&quot;,
+            &quot;veth1f2413c&quot;,
+            &quot;lo&quot;,
+            &quot;docker0&quot;,
+            &quot;veth31bfec5&quot;,
+            &quot;veth749b768&quot;,
+            &quot;veth4a35a56&quot;,
+            &quot;vethee6ed69&quot;,
+            &quot;br-afd434d048f8&quot;,
+            &quot;vetha628278&quot;,
+            &quot;wlp61s0&quot;,
+            &quot;enp0s31f6&quot;
+        ],
+        &quot;ansible_is_chroot&quot;: false,
+        &quot;ansible_iscsi_iqn&quot;: &quot;&quot;,
+        &quot;ansible_kernel&quot;: &quot;5.9.16-1-MANJARO&quot;,
+        &quot;ansible_kernel_version&quot;: &quot;#1 SMP PREEMPT Mon Dec 21 22:00:46 UTC 2020&quot;,
+        &quot;ansible_lo&quot;: {
+            &quot;active&quot;: true,
+            &quot;device&quot;: &quot;lo&quot;,
+            &quot;ipv4&quot;: {
+                &quot;address&quot;: &quot;127.0.0.1&quot;,
+                &quot;broadcast&quot;: &quot;&quot;,
+                &quot;netmask&quot;: &quot;255.0.0.0&quot;,
+                &quot;network&quot;: &quot;127.0.0.0&quot;
+            },
+            &quot;ipv6&quot;: [
+                {
+                    &quot;address&quot;: &quot;::1&quot;,
+                    &quot;prefix&quot;: &quot;128&quot;,
+                    &quot;scope&quot;: &quot;host&quot;
+                }
+            ],
+            &quot;mtu&quot;: 65536,
+            &quot;promisc&quot;: false,
+            &quot;type&quot;: &quot;loopback&quot;
+        },
+        &quot;ansible_local&quot;: {},
+        &quot;ansible_lsb&quot;: {
+            &quot;codename&quot;: &quot;Pahvo&quot;,
+            &quot;description&quot;: &quot;Manjaro Linux&quot;,
+            &quot;id&quot;: &quot;ManjaroLinux&quot;,
+            &quot;major_release&quot;: &quot;21&quot;,
+            &quot;release&quot;: &quot;21.1.2&quot;
+        },
+        &quot;ansible_machine&quot;: &quot;x86_64&quot;,
+        &quot;ansible_machine_id&quot;: &quot;b356a59c71254822879b733455214639&quot;,
+        &quot;ansible_memfree_mb&quot;: 1061,
+        &quot;ansible_memory_mb&quot;: {
+            &quot;nocache&quot;: {
+                &quot;free&quot;: 4529,
+                &quot;used&quot;: 11134
+            },
+            &quot;real&quot;: {
+                &quot;free&quot;: 1061,
+                &quot;total&quot;: 15663,
+                &quot;used&quot;: 14602
+            },
+            &quot;swap&quot;: {
+                &quot;cached&quot;: 32,
+                &quot;free&quot;: 14971,
+                &quot;total&quot;: 17231,
+                &quot;used&quot;: 2260
+            }
+        },
+        &quot;ansible_memtotal_mb&quot;: 15663,
+        &quot;ansible_mounts&quot;: [
+            {
+                &quot;block_available&quot;: 19172072,
+                &quot;block_size&quot;: 4096,
+                &quot;block_total&quot;: 56926896,
+                &quot;block_used&quot;: 37754824,
+                &quot;device&quot;: &quot;/dev/nvme0n1p1&quot;,
+                &quot;fstype&quot;: &quot;ext4&quot;,
+                &quot;inode_available&quot;: 11707821,
+                &quot;inode_total&quot;: 14532608,
+                &quot;inode_used&quot;: 2824787,
+                &quot;mount&quot;: &quot;/&quot;,
+                &quot;options&quot;: &quot;rw,noatime&quot;,
+                &quot;size_available&quot;: 78528806912,
+                &quot;size_total&quot;: 233172566016,
+                &quot;uuid&quot;: &quot;22f9471a-4209-4383-8307-acb35aff624a&quot;
+            },
+            {
+                &quot;block_available&quot;: 0,
+                &quot;block_size&quot;: 131072,
+                &quot;block_total&quot;: 444,
+                &quot;block_used&quot;: 444,
+                &quot;device&quot;: &quot;/dev/loop8&quot;,
+                &quot;fstype&quot;: &quot;squashfs&quot;,
+                &quot;inode_available&quot;: 0,
+                &quot;inode_total&quot;: 10803,
+                &quot;inode_used&quot;: 10803,
+                &quot;mount&quot;: &quot;/var/lib/snapd/snap/core18/2074&quot;,
+                &quot;options&quot;: &quot;ro,nodev,relatime&quot;,
+                &quot;size_available&quot;: 0,
+                &quot;size_total&quot;: 58195968,
+                &quot;uuid&quot;: &quot;N/A&quot;
+            },
+            {
+                &quot;block_available&quot;: 0,
+                &quot;block_size&quot;: 131072,
+                &quot;block_total&quot;: 259,
+                &quot;block_used&quot;: 259,
+                &quot;device&quot;: &quot;/dev/loop6&quot;,
+                &quot;fstype&quot;: &quot;squashfs&quot;,
+                &quot;inode_available&quot;: 0,
+                &quot;inode_total&quot;: 474,
+                &quot;inode_used&quot;: 474,
+                &quot;mount&quot;: &quot;/var/lib/snapd/snap/snapd/13170&quot;,
+                &quot;options&quot;: &quot;ro,nodev,relatime&quot;,
+                &quot;size_available&quot;: 0,
+                &quot;size_total&quot;: 33947648,
+                &quot;uuid&quot;: &quot;N/A&quot;
+            },
+            {
+                &quot;block_available&quot;: 0,
+                &quot;block_size&quot;: 131072,
+                &quot;block_total&quot;: 444,
+                &quot;block_used&quot;: 444,
+                &quot;device&quot;: &quot;/dev/loop0&quot;,
+                &quot;fstype&quot;: &quot;squashfs&quot;,
+                &quot;inode_available&quot;: 0,
+                &quot;inode_total&quot;: 10803,
+                &quot;inode_used&quot;: 10803,
+                &quot;mount&quot;: &quot;/var/lib/snapd/snap/core18/2128&quot;,
+                &quot;options&quot;: &quot;ro,nodev,relatime&quot;,
+                &quot;size_available&quot;: 0,
+                &quot;size_total&quot;: 58195968,
+                &quot;uuid&quot;: &quot;N/A&quot;
+            },
+            {
+                &quot;block_available&quot;: 0,
+                &quot;block_size&quot;: 131072,
+                &quot;block_total&quot;: 990,
+                &quot;block_used&quot;: 990,
+                &quot;device&quot;: &quot;/dev/loop5&quot;,
+                &quot;fstype&quot;: &quot;squashfs&quot;,
+                &quot;inode_available&quot;: 0,
+                &quot;inode_total&quot;: 24361,
+                &quot;inode_used&quot;: 24361,
+                &quot;mount&quot;: &quot;/var/lib/snapd/snap/slack/43&quot;,
+                &quot;options&quot;: &quot;ro,nodev,relatime&quot;,
+                &quot;size_available&quot;: 0,
+                &quot;size_total&quot;: 129761280,
+                &quot;uuid&quot;: &quot;N/A&quot;
+            },
+            {
+                &quot;block_available&quot;: 0,
+                &quot;block_size&quot;: 131072,
+                &quot;block_total&quot;: 1319,
+                &quot;block_used&quot;: 1319,
+                &quot;device&quot;: &quot;/dev/loop1&quot;,
+                &quot;fstype&quot;: &quot;squashfs&quot;,
+                &quot;inode_available&quot;: 0,
+                &quot;inode_total&quot;: 27806,
+                &quot;inode_used&quot;: 27806,
+                &quot;mount&quot;: &quot;/var/lib/snapd/snap/gnome-3-28-1804/161&quot;,
+                &quot;options&quot;: &quot;ro,nodev,relatime&quot;,
+                &quot;size_available&quot;: 0,
+                &quot;size_total&quot;: 172883968,
+                &quot;uuid&quot;: &quot;N/A&quot;
+            },
+            {
+                &quot;block_available&quot;: 0,
+                &quot;block_size&quot;: 131072,
+                &quot;block_total&quot;: 1113,
+                &quot;block_used&quot;: 1113,
+                &quot;device&quot;: &quot;/dev/loop3&quot;,
+                &quot;fstype&quot;: &quot;squashfs&quot;,
+                &quot;inode_available&quot;: 0,
+                &quot;inode_total&quot;: 15168,
+                &quot;inode_used&quot;: 15168,
+                &quot;mount&quot;: &quot;/var/lib/snapd/snap/skype/177&quot;,
+                &quot;options&quot;: &quot;ro,nodev,relatime&quot;,
+                &quot;size_available&quot;: 0,
+                &quot;size_total&quot;: 145883136,
+                &quot;uuid&quot;: &quot;N/A&quot;
+            },
+            {
+                &quot;block_available&quot;: 0,
+                &quot;block_size&quot;: 131072,
+                &quot;block_total&quot;: 1113,
+                &quot;block_used&quot;: 1113,
+                &quot;device&quot;: &quot;/dev/loop4&quot;,
+                &quot;fstype&quot;: &quot;squashfs&quot;,
+                &quot;inode_available&quot;: 0,
+                &quot;inode_total&quot;: 15168,
+                &quot;inode_used&quot;: 15168,
+                &quot;mount&quot;: &quot;/var/lib/snapd/snap/skype/183&quot;,
+                &quot;options&quot;: &quot;ro,nodev,relatime&quot;,
+                &quot;size_available&quot;: 0,
+                &quot;size_total&quot;: 145883136,
+                &quot;uuid&quot;: &quot;N/A&quot;
+            },
+            {
+                &quot;block_available&quot;: 0,
+                &quot;block_size&quot;: 131072,
+                &quot;block_total&quot;: 1,
+                &quot;block_used&quot;: 1,
+                &quot;device&quot;: &quot;/dev/loop9&quot;,
+                &quot;fstype&quot;: &quot;squashfs&quot;,
+                &quot;inode_available&quot;: 0,
+                &quot;inode_total&quot;: 29,
+                &quot;inode_used&quot;: 29,
+                &quot;mount&quot;: &quot;/var/lib/snapd/snap/bare/5&quot;,
+                &quot;options&quot;: &quot;ro,nodev,relatime&quot;,
+                &quot;size_available&quot;: 0,
+                &quot;size_total&quot;: 131072,
+                &quot;uuid&quot;: &quot;N/A&quot;
+            },
+            {
+                &quot;block_available&quot;: 0,
+                &quot;block_size&quot;: 131072,
+                &quot;block_total&quot;: 521,
+                &quot;block_used&quot;: 521,
+                &quot;device&quot;: &quot;/dev/loop2&quot;,
+                &quot;fstype&quot;: &quot;squashfs&quot;,
+                &quot;inode_available&quot;: 0,
+                &quot;inode_total&quot;: 64986,
+                &quot;inode_used&quot;: 64986,
+                &quot;mount&quot;: &quot;/var/lib/snapd/snap/gtk-common-themes/1515&quot;,
+                &quot;options&quot;: &quot;ro,nodev,relatime&quot;,
+                &quot;size_available&quot;: 0,
+                &quot;size_total&quot;: 68288512,
+                &quot;uuid&quot;: &quot;N/A&quot;
+            },
+            {
+                &quot;block_available&quot;: 0,
+                &quot;block_size&quot;: 131072,
+                &quot;block_total&quot;: 990,
+                &quot;block_used&quot;: 990,
+                &quot;device&quot;: &quot;/dev/loop10&quot;,
+                &quot;fstype&quot;: &quot;squashfs&quot;,
+                &quot;inode_available&quot;: 0,
+                &quot;inode_total&quot;: 24362,
+                &quot;inode_used&quot;: 24362,
+                &quot;mount&quot;: &quot;/var/lib/snapd/snap/slack/42&quot;,
+                &quot;options&quot;: &quot;ro,nodev,relatime&quot;,
+                &quot;size_available&quot;: 0,
+                &quot;size_total&quot;: 129761280,
+                &quot;uuid&quot;: &quot;N/A&quot;
+            },
+            {
+                &quot;block_available&quot;: 0,
+                &quot;block_size&quot;: 131072,
+                &quot;block_total&quot;: 522,
+                &quot;block_used&quot;: 522,
+                &quot;device&quot;: &quot;/dev/loop11&quot;,
+                &quot;fstype&quot;: &quot;squashfs&quot;,
+                &quot;inode_available&quot;: 0,
+                &quot;inode_total&quot;: 65095,
+                &quot;inode_used&quot;: 65095,
+                &quot;mount&quot;: &quot;/var/lib/snapd/snap/gtk-common-themes/1519&quot;,
+                &quot;options&quot;: &quot;ro,nodev,relatime&quot;,
+                &quot;size_available&quot;: 0,
+                &quot;size_total&quot;: 68419584,
+                &quot;uuid&quot;: &quot;N/A&quot;
+            },
+            {
+                &quot;block_available&quot;: 0,
+                &quot;block_size&quot;: 131072,
+                &quot;block_total&quot;: 259,
+                &quot;block_used&quot;: 259,
+                &quot;device&quot;: &quot;/dev/loop12&quot;,
+                &quot;fstype&quot;: &quot;squashfs&quot;,
+                &quot;inode_available&quot;: 0,
+                &quot;inode_total&quot;: 474,
+                &quot;inode_used&quot;: 474,
+                &quot;mount&quot;: &quot;/var/lib/snapd/snap/snapd/12883&quot;,
+                &quot;options&quot;: &quot;ro,nodev,relatime&quot;,
+                &quot;size_available&quot;: 0,
+                &quot;size_total&quot;: 33947648,
+                &quot;uuid&quot;: &quot;N/A&quot;
+            },
+            {
+                &quot;block_available&quot;: 0,
+                &quot;block_size&quot;: 131072,
+                &quot;block_total&quot;: 795,
+                &quot;block_used&quot;: 795,
+                &quot;device&quot;: &quot;/dev/loop13&quot;,
+                &quot;fstype&quot;: &quot;squashfs&quot;,
+                &quot;inode_available&quot;: 0,
+                &quot;inode_total&quot;: 12850,
+                &quot;inode_used&quot;: 12850,
+                &quot;mount&quot;: &quot;/var/lib/snapd/snap/core/11606&quot;,
+                &quot;options&quot;: &quot;ro,nodev,relatime&quot;,
+                &quot;size_available&quot;: 0,
+                &quot;size_total&quot;: 104202240,
+                &quot;uuid&quot;: &quot;N/A&quot;
+            },
+            {
+                &quot;block_available&quot;: 0,
+                &quot;block_size&quot;: 131072,
+                &quot;block_total&quot;: 1303,
+                &quot;block_used&quot;: 1303,
+                &quot;device&quot;: &quot;/dev/loop14&quot;,
+                &quot;fstype&quot;: &quot;squashfs&quot;,
+                &quot;inode_available&quot;: 0,
+                &quot;inode_total&quot;: 27807,
+                &quot;inode_used&quot;: 27807,
+                &quot;mount&quot;: &quot;/var/lib/snapd/snap/gnome-3-28-1804/145&quot;,
+                &quot;options&quot;: &quot;ro,nodev,relatime&quot;,
+                &quot;size_available&quot;: 0,
+                &quot;size_total&quot;: 170786816,
+                &quot;uuid&quot;: &quot;N/A&quot;
+            },
+            {
+                &quot;block_available&quot;: 0,
+                &quot;block_size&quot;: 131072,
+                &quot;block_total&quot;: 795,
+                &quot;block_used&quot;: 795,
+                &quot;device&quot;: &quot;/dev/loop15&quot;,
+                &quot;fstype&quot;: &quot;squashfs&quot;,
+                &quot;inode_available&quot;: 0,
+                &quot;inode_total&quot;: 12844,
+                &quot;inode_used&quot;: 12844,
+                &quot;mount&quot;: &quot;/var/lib/snapd/snap/core/11743&quot;,
+                &quot;options&quot;: &quot;ro,nodev,relatime&quot;,
+                &quot;size_available&quot;: 0,
+                &quot;size_total&quot;: 104202240,
+                &quot;uuid&quot;: &quot;N/A&quot;
+            }
+        ],
+        &quot;ansible_nodename&quot;: &quot;codeshow&quot;,
+        &quot;ansible_os_family&quot;: &quot;Archlinux&quot;,
+        &quot;ansible_pkg_mgr&quot;: &quot;pacman&quot;,
+        &quot;ansible_proc_cmdline&quot;: {
+            &quot;BOOT_IMAGE&quot;: &quot;/boot/vmlinuz-5.9-x86_64&quot;,
+            &quot;apparmor&quot;: &quot;1&quot;,
+            &quot;quiet&quot;: true,
+            &quot;resume&quot;: &quot;UUID=41ffbbcc-70fa-46ba-b081-168b6ade98b5&quot;,
+            &quot;root&quot;: &quot;UUID=22f9471a-4209-4383-8307-acb35aff624a&quot;,
+            &quot;rw&quot;: true,
+            &quot;security&quot;: &quot;apparmor&quot;,
+            &quot;udev.log_priority&quot;: &quot;3&quot;
+        },
+        &quot;ansible_processor&quot;: [
+            &quot;0&quot;,
+            &quot;GenuineIntel&quot;,
+            &quot;Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz&quot;,
+            &quot;1&quot;,
+            &quot;GenuineIntel&quot;,
+            &quot;Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz&quot;,
+            &quot;2&quot;,
+            &quot;GenuineIntel&quot;,
+            &quot;Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz&quot;,
+            &quot;3&quot;,
+            &quot;GenuineIntel&quot;,
+            &quot;Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz&quot;,
+            &quot;4&quot;,
+            &quot;GenuineIntel&quot;,
+            &quot;Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz&quot;,
+            &quot;5&quot;,
+            &quot;GenuineIntel&quot;,
+            &quot;Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz&quot;,
+            &quot;6&quot;,
+            &quot;GenuineIntel&quot;,
+            &quot;Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz&quot;,
+            &quot;7&quot;,
+            &quot;GenuineIntel&quot;,
+            &quot;Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz&quot;
+        ],
+        &quot;ansible_processor_cores&quot;: 4,
+        &quot;ansible_processor_count&quot;: 1,
+        &quot;ansible_processor_nproc&quot;: 8,
+        &quot;ansible_processor_threads_per_core&quot;: 2,
+        &quot;ansible_processor_vcpus&quot;: 8,
+        &quot;ansible_product_name&quot;: &quot;20L8S2N80K&quot;,
+        &quot;ansible_product_serial&quot;: &quot;NA&quot;,
+        &quot;ansible_product_uuid&quot;: &quot;NA&quot;,
+        &quot;ansible_product_version&quot;: &quot;ThinkPad T480s&quot;,
+        &quot;ansible_python&quot;: {
+            &quot;executable&quot;: &quot;/home/rochacbruno/.virtualenvs/ansible-act/bin/python&quot;,
+            &quot;has_sslcontext&quot;: true,
+            &quot;type&quot;: &quot;cpython&quot;,
+            &quot;version&quot;: {
+                &quot;major&quot;: 3,
+                &quot;micro&quot;: 6,
+                &quot;minor&quot;: 9,
+                &quot;releaselevel&quot;: &quot;final&quot;,
+                &quot;serial&quot;: 0
+            },
+            &quot;version_info&quot;: [
+                3,
+                9,
+                6,
+                &quot;final&quot;,
+                0
+            ]
+        },
+        &quot;ansible_python_version&quot;: &quot;3.9.6&quot;,
+        &quot;ansible_real_group_id&quot;: 1000,
+        &quot;ansible_real_user_id&quot;: 1000,
+        &quot;ansible_selinux&quot;: {
+            &quot;status&quot;: &quot;Missing selinux Python library&quot;
+        },
+        &quot;ansible_selinux_python_present&quot;: false,
+        &quot;ansible_service_mgr&quot;: &quot;systemd&quot;,
+        &quot;ansible_swapfree_mb&quot;: 14971,
+        &quot;ansible_swaptotal_mb&quot;: 17231,
+        &quot;ansible_system&quot;: &quot;Linux&quot;,
+        &quot;ansible_system_capabilities&quot;: [
+            &quot;&quot;
+        ],
+        &quot;ansible_system_capabilities_enforced&quot;: &quot;True&quot;,
+        &quot;ansible_system_vendor&quot;: &quot;LENOVO&quot;,
+        &quot;ansible_uptime_seconds&quot;: 443037,
+        &quot;ansible_user_dir&quot;: &quot;/home/rochacbruno&quot;,
+        &quot;ansible_user_gecos&quot;: &quot;Bruno&quot;,
+        &quot;ansible_user_gid&quot;: 1000,
+        &quot;ansible_user_id&quot;: &quot;rochacbruno&quot;,
+        &quot;ansible_user_shell&quot;: &quot;/usr/bin/zsh&quot;,
+        &quot;ansible_user_uid&quot;: 1000,
+        &quot;ansible_userspace_architecture&quot;: &quot;x86_64&quot;,
+        &quot;ansible_userspace_bits&quot;: &quot;64&quot;,
+        &quot;ansible_veth1f2413c&quot;: {
+            &quot;active&quot;: true,
+            &quot;device&quot;: &quot;veth1f2413c&quot;,
+            &quot;ipv6&quot;: [
+                {
+                    &quot;address&quot;: &quot;fe80::9c27:13ff:feac:cb5b&quot;,
+                    &quot;prefix&quot;: &quot;64&quot;,
+                    &quot;scope&quot;: &quot;link&quot;
+                }
+            ],
+            &quot;macaddress&quot;: &quot;9e:27:13:ac:cb:5b&quot;,
+            &quot;mtu&quot;: 1500,
+            &quot;promisc&quot;: true,
+            &quot;speed&quot;: 10000,
+            &quot;type&quot;: &quot;ether&quot;
+        },
+        &quot;ansible_veth31bfec5&quot;: {
+            &quot;active&quot;: true,
+            &quot;device&quot;: &quot;veth31bfec5&quot;,
+            &quot;ipv6&quot;: [
+                {
+                    &quot;address&quot;: &quot;fe80::e4e7:e9ff:fe41:3565&quot;,
+                    &quot;prefix&quot;: &quot;64&quot;,
+                    &quot;scope&quot;: &quot;link&quot;
+                }
+            ],
+            &quot;macaddress&quot;: &quot;e6:e7:e9:41:35:65&quot;,
+            &quot;mtu&quot;: 1500,
+            &quot;promisc&quot;: true,
+            &quot;speed&quot;: 10000,
+            &quot;type&quot;: &quot;ether&quot;
+        },
+        &quot;ansible_veth4a35a56&quot;: {
+            &quot;active&quot;: true,
+            &quot;device&quot;: &quot;veth4a35a56&quot;,
+            &quot;ipv6&quot;: [
+                {
+                    &quot;address&quot;: &quot;fe80::c000:feff:fe32:6805&quot;,
+                    &quot;prefix&quot;: &quot;64&quot;,
+                    &quot;scope&quot;: &quot;link&quot;
+                }
+            ],
+            &quot;macaddress&quot;: &quot;c2:00:fe:32:68:05&quot;,
+            &quot;mtu&quot;: 1500,
+            &quot;promisc&quot;: true,
+            &quot;speed&quot;: 10000,
+            &quot;type&quot;: &quot;ether&quot;
+        },
+        &quot;ansible_veth749b768&quot;: {
+            &quot;active&quot;: true,
+            &quot;device&quot;: &quot;veth749b768&quot;,
+            &quot;ipv6&quot;: [
+                {
+                    &quot;address&quot;: &quot;fe80::ac43:64ff:fe2d:cc19&quot;,
+                    &quot;prefix&quot;: &quot;64&quot;,
+                    &quot;scope&quot;: &quot;link&quot;
+                }
+            ],
+            &quot;macaddress&quot;: &quot;ae:43:64:2d:cc:19&quot;,
+            &quot;mtu&quot;: 1500,
+            &quot;promisc&quot;: true,
+            &quot;speed&quot;: 10000,
+            &quot;type&quot;: &quot;ether&quot;
+        },
+        &quot;ansible_vetha628278&quot;: {
+            &quot;active&quot;: true,
+            &quot;device&quot;: &quot;vetha628278&quot;,
+            &quot;ipv6&quot;: [
+                {
+                    &quot;address&quot;: &quot;fe80::7848:f7ff:fec0:a732&quot;,
+                    &quot;prefix&quot;: &quot;64&quot;,
+                    &quot;scope&quot;: &quot;link&quot;
+                }
+            ],
+            &quot;macaddress&quot;: &quot;7a:48:f7:c0:a7:32&quot;,
+            &quot;mtu&quot;: 1500,
+            &quot;promisc&quot;: true,
+            &quot;speed&quot;: 10000,
+            &quot;type&quot;: &quot;ether&quot;
+        },
+        &quot;ansible_vethcaf89d4&quot;: {
+            &quot;active&quot;: true,
+            &quot;device&quot;: &quot;vethcaf89d4&quot;,
+            &quot;ipv6&quot;: [
+                {
+                    &quot;address&quot;: &quot;fe80::fcd9:fff:fe00:cca2&quot;,
+                    &quot;prefix&quot;: &quot;64&quot;,
+                    &quot;scope&quot;: &quot;link&quot;
+                }
+            ],
+            &quot;macaddress&quot;: &quot;fe:d9:0f:00:cc:a2&quot;,
+            &quot;mtu&quot;: 1500,
+            &quot;promisc&quot;: true,
+            &quot;speed&quot;: 10000,
+            &quot;type&quot;: &quot;ether&quot;
+        },
+        &quot;ansible_vethee6ed69&quot;: {
+            &quot;active&quot;: true,
+            &quot;device&quot;: &quot;vethee6ed69&quot;,
+            &quot;ipv6&quot;: [
+                {
+                    &quot;address&quot;: &quot;fe80::10ab:41ff:fe13:6d62&quot;,
+                    &quot;prefix&quot;: &quot;64&quot;,
+                    &quot;scope&quot;: &quot;link&quot;
+                }
+            ],
+            &quot;macaddress&quot;: &quot;12:ab:41:13:6d:62&quot;,
+            &quot;mtu&quot;: 1500,
+            &quot;promisc&quot;: true,
+            &quot;speed&quot;: 10000,
+            &quot;type&quot;: &quot;ether&quot;
+        },
+        &quot;ansible_virtualization_role&quot;: &quot;host&quot;,
+        &quot;ansible_virtualization_tech_guest&quot;: [],
+        &quot;ansible_virtualization_tech_host&quot;: [
+            &quot;virtualbox&quot;,
+            &quot;kvm&quot;
+        ],
+        &quot;ansible_virtualization_type&quot;: &quot;kvm&quot;,
+        &quot;ansible_wlp61s0&quot;: {
+            &quot;active&quot;: true,
+            &quot;device&quot;: &quot;wlp61s0&quot;,
+            &quot;ipv4&quot;: {
+                &quot;address&quot;: &quot;192.168.1.67&quot;,
+                &quot;broadcast&quot;: &quot;192.168.1.255&quot;,
+                &quot;netmask&quot;: &quot;255.255.255.0&quot;,
+                &quot;network&quot;: &quot;192.168.1.0&quot;
+            },
+            &quot;ipv6&quot;: [
+                {
+                    &quot;address&quot;: &quot;2001:8a0:f879:500:ada4:65f3:be42:6185&quot;,
+                    &quot;prefix&quot;: &quot;64&quot;,
+                    &quot;scope&quot;: &quot;global&quot;
+                },
+                {
+                    &quot;address&quot;: &quot;fe80::d7b9:6e5a:3cf2:b56&quot;,
+                    &quot;prefix&quot;: &quot;64&quot;,
+                    &quot;scope&quot;: &quot;link&quot;
+                }
+            ],
+            &quot;macaddress&quot;: &quot;b4:6b:fc:a3:8c:e8&quot;,
+            &quot;module&quot;: &quot;iwlwifi&quot;,
+            &quot;mtu&quot;: 1500,
+            &quot;pciid&quot;: &quot;0000:3d:00.0&quot;,
+            &quot;promisc&quot;: false,
+            &quot;type&quot;: &quot;ether&quot;
+        },
+        &quot;gather_subset&quot;: [
+            &quot;all&quot;
+        ],
+        &quot;module_setup&quot;: true
+    },
+    &quot;changed&quot;: false,
+    &quot;deprecations&quot;: [],
+    &quot;warnings&quot;: []
+}</system-out>
+		</testcase>
+		<testcase name="[localhost] Functional tests for project: include_tasks _raw_params=test-users.yaml" time="0.006483" classname="/home/rochacbruno/Projects/ansible-test/test-playbook.yaml:17">
+			<system-out>{
+    &quot;changed&quot;: false,
+    &quot;include&quot;: &quot;test-users.yaml&quot;,
+    &quot;include_args&quot;: {}
+}</system-out>
+		</testcase>
+		<testcase name="[include] Functional tests for project: include_tasks _raw_params=test-users.yaml" time="0.018346" classname="/home/rochacbruno/Projects/ansible-test/test-playbook.yaml:17">
+			<system-out>/home/rochacbruno/Projects/ansible-test/test-users.yaml (args={} vars={}): [localhost]</system-out>
+		</testcase>
+		<testcase name="[localhost] Functional tests for project: Dummy Test using=namespace.project, actions=['user.foo', 'user.bar']" time="0.313052" classname="/home/rochacbruno/Projects/ansible-test/test-users.yaml:2">
+			<system-out>{
+    &quot;changed&quot;: true,
+    &quot;invocation&quot;: {
+        &quot;module_args&quot;: {
+            &quot;actions&quot;: [
+                &quot;user.foo&quot;,
+                &quot;user.bar&quot;
+            ],
+            &quot;expect&quot;: null,
+            &quot;export&quot;: null,
+            &quot;required&quot;: true,
+            &quot;skipif&quot;: null,
+            &quot;using&quot;: &quot;namespace.project&quot;
+        }
+    },
+    &quot;status&quot;: &quot;ok&quot;,
+    &quot;test_case&quot;: &quot;TestCase(using=None, actions=None, skip_if=None, expect=None, export=None, required=True)&quot;
+}</system-out>
+		</testcase>
+		<testcase name="[localhost] Functional tests for project: Create Two Active Users using=namespace.project, actions=[{'user.create': {'inputs': [{'name': 'admin', 'password': 'admin', 'active': True}, {'name': 'user', 'password': 'user', 'active': True}], 'expect': ['result.status == ok']}}, {'user.update': {'inputs': {'get': {'name': 'admin'}, 'set': {'active': False}}, 'expect': ['result.status == ok', 'result.data.active == false']}}, {'user.list': {'title': 'Listing Created Users', 'outputs': 'users1', 'expect': 'result.status == ok'}}, {'user.list': {'title': 'Listing Created Users', 'outputs': 'users2', 'expect': 'result.status == ok'}}, 'user.refresh'], export={'users': 'users1 + users2'}, expect=['result.status == ok', 'result.data.users[0].name == admin', 'result.actions[1].data.active == false', &quot;result.actions['my-update'].data.active == false&quot;, 'users == [admin, user]']" time="0.224154" classname="/home/rochacbruno/Projects/ansible-test/test-users.yaml:9">
+			<error type="error" message="TypeError: unhashable type: 'list'">Traceback (most recent call last):
+  File &quot;/home/rochacbruno/.ansible/tmp/ansible-tmp-1633019843.3464017-973658-24481623501787/AnsiballZ_case.py&quot;, line 100, in &lt;module&gt;
+    _ansiballz_main()
+  File &quot;/home/rochacbruno/.ansible/tmp/ansible-tmp-1633019843.3464017-973658-24481623501787/AnsiballZ_case.py&quot;, line 92, in _ansiballz_main
+    invoke_module(zipped_mod, temp_path, ANSIBALLZ_PARAMS)
+  File &quot;/home/rochacbruno/.ansible/tmp/ansible-tmp-1633019843.3464017-973658-24481623501787/AnsiballZ_case.py&quot;, line 40, in invoke_module
+    runpy.run_module(mod_name='ansible_collections.ansible.test.plugins.modules.case', init_globals=dict(_module_fqn='ansible_collections.ansible.test.plugins.modules.case', _modlib_path=modlib_path),
+  File &quot;/usr/lib/python3.9/runpy.py&quot;, line 210, in run_module
+    return _run_module_code(code, init_globals, run_name, mod_spec)
+  File &quot;/usr/lib/python3.9/runpy.py&quot;, line 97, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File &quot;/usr/lib/python3.9/runpy.py&quot;, line 87, in _run_code
+    exec(code, run_globals)
+  File &quot;/tmp/ansible_ansible.test.case_payload_upyi3p6b/ansible_ansible.test.case_payload.zip/ansible_collections/ansible/test/plugins/modules/case.py&quot;, line 80, in &lt;module&gt;
+  File &quot;/tmp/ansible_ansible.test.case_payload_upyi3p6b/ansible_ansible.test.case_payload.zip/ansible_collections/ansible/test/plugins/modules/case.py&quot;, line 76, in main
+  File &quot;/tmp/ansible_ansible.test.case_payload_upyi3p6b/ansible_ansible.test.case_payload.zip/ansible_collections/ansible/test/plugins/modules/case.py&quot;, line 33, in run_module
+  File &quot;/tmp/ansible_ansible.test.case_payload_upyi3p6b/ansible_ansible.test.case_payload.zip/ansible/module_utils/basic.py&quot;, line 499, in __init__
+  File &quot;/tmp/ansible_ansible.test.case_payload_upyi3p6b/ansible_ansible.test.case_payload.zip/ansible/module_utils/common/arg_spec.py&quot;, line 276, in validate
+  File &quot;/tmp/ansible_ansible.test.case_payload_upyi3p6b/ansible_ansible.test.case_payload.zip/ansible/module_utils/common/arg_spec.py&quot;, line 233, in validate
+  File &quot;/tmp/ansible_ansible.test.case_payload_upyi3p6b/ansible_ansible.test.case_payload.zip/ansible/module_utils/common/parameters.py&quot;, line 607, in _validate_argument_types
+  File &quot;/tmp/ansible_ansible.test.case_payload_upyi3p6b/ansible_ansible.test.case_payload.zip/ansible/module_utils/common/parameters.py&quot;, line 140, in _get_type_validator
+TypeError: unhashable type: 'list'
+</error>
+		</testcase>
+	</testsuite>
+</testsuites>

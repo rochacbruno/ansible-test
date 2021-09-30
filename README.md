@@ -4,20 +4,22 @@ ansible.test.case is a testing framework and test runner within ansible tasks, i
 ## Declarative test cases
 
 ```YAML
-- name: Create Two Active Users
-  ansible.test.case:
-    using: myproject.user
-    action: create
-    with:
+# This is a standard ansible-playbook-task.yaml 
+---
+- name: Create Two Active Users          # The name of the test case        
+  ansible.test.case:                     # Declare the test.case module
+    using: namespace.project.user        # Project specific actions module
+    action: create                       # The action to perform
+    inputs:                              # The inputs to the action
       - name: admin
         password: admin
         active: true
       - name: user
         password: user
         active: true
-    register: users
-    assert:
-      - that: status == 200
+    register: users                      # The result of the action is registered as users
+    assert:                              # The assertions to perform
+      - that: status == ok               # Assert that the status code is success, possible statuses are ok, error, skipped
 ```
 
 ```bash

@@ -8,8 +8,11 @@ install:
 
 run:
 	@echo "Running..."
-	@ansible-playbook --connection=local test-playbook.yaml
+	@ansible-playbook --connection=local -vvv test-playbook.yaml
 
 adhoc:
 	@echo "Running adhoc..."
-	2ansible localhost, -m ansible.test.case -a "bar=baz"
+	@ansible localhost, -m ansible.test.case -a "using=foo action=baz outputs=bla"
+
+watch:
+	ls **/** | entr make build install run
