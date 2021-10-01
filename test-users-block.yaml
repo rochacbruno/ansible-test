@@ -1,0 +1,27 @@
+---
+- name: Test Case
+  block:
+    - ansible.test.case:
+        using: namespace.project
+        actions:
+          - user.create
+      register: test1
+    - assert:
+        that: 
+        - test1.status == "ok"
+        success_msg: Yuhuuuu
+
+
+
+# - name: Test Case
+#   block:
+#     - namespace.project.actions:
+#         action: user.create
+#         inputs:
+#           name: foo 
+#           password: bar
+#       register: user
+#     - assert:
+#         that:
+#         - user.status == "ok"
+#         success_msg: Yuhuuuu

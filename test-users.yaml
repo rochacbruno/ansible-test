@@ -4,56 +4,64 @@
     using: namespace.project
     actions:
       - test.banana:
+          title: "banana test"
+          skipif: matrix == api
           inputs: 
             foo: bar
-          expect: dummy
+            bar1: 4
+            ba:
+              dar: 1
+          expect: dummy == bar
+          export: banana
       - user.foo
       - user.bar
     expect: 
       - foo == bar
-      - foo == bar
-
-- name: Create Two Active Users
-  ansible.test.case:
-    using: namespace.project
-    actions:
-      - user.create:
-          inputs:
-            - name: admin
-              password: admin
-              active: true
-            - name: user
-              password: user
-              active: true
-          expect:
-            - result.status == ok
-      - user.update:
-          inputs:
-            get:
-              name: admin
-            set:
-              active: false
-          expect:
-            - result.status == ok
-            - result.data.active == false
-      - user.list:
-          title: Listing Created Users
-          outputs: users1
-          expect: result.status == ok      
-      - user.list:
-          title: Listing Created Users
-          outputs: users2
-          expect: result.status == ok
-      - user.refresh
+      - naz != zaz
     export:
-      # users: result.actions[2].data + result.actions[3].data
-      users: users1 + users2
-    expect:
-      - result.status == ok
-      - result.data.users[0].name == admin
-      - result.actions[1].data.active == false
-      - result.actions['my-update'].data.active == false
-      - users == [admin, user]
+      blarg: result.foo
+
+# - name: Create Two Active Users
+#   ansible.test.case:
+#     using: namespace.project
+#     actions:
+#       - user.create:
+#           inputs:
+#             - name: admin
+#               password: admin
+#               active: true
+#             - name: user
+#               password: user
+#               active: true
+#           expect:
+#             - result.status == ok
+#       - user.update:
+#           inputs:
+#             get:
+#               name: admin
+#             set:
+#               active: false
+#           expect:
+#             - result.status == ok
+#             - result.data.active == false
+#       - user.list:
+#           title: Listing Created Users
+#           outputs: users1
+#           expect: result.status == ok      
+#       - user.list:
+#           title: Listing Created Users
+#           outputs: users2
+#           expect: result.status == ok
+#       - user.refresh
+#     export:
+#       # users: result.actions[2].data + result.actions[3].data
+#       users: users1 + users2
+#     expect:
+#       - result.status == ok
+#       - result.data.users[0].name == admin
+#       - result.actions[1].data.active == false
+#       - result.actions['my-update'].data.active == false
+#       - users == [admin, user]
 
 # - name: Update password of user
 #   ansible.test.case:

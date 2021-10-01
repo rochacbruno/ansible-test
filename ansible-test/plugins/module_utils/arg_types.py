@@ -1,9 +1,13 @@
 from .models import (
-    Action,
     ActionList,
+    Action,
     ExpectList,
     Expect,
+    ExportDict,
+    SkipIfList,
+    SkipIf,
 )
+from .validators import validate_boolean, validate_conditionals,validate_export_dict
 
 
 class ArgType:
@@ -21,7 +25,9 @@ class UsingArgType(ArgType):
         3. Check if namespace.collection is installed
         """
         if not isinstance(value, str):
-            raise ValueError(f"`using` must be a string, got {type(value)}")
+            raise ValueError(
+                f"`using` must be a string, got {type(value).__name__}"
+            )
         if len(value.split(".")) != 2:
             raise ValueError(
                 f"`using` must be a <namespace>.<collection>, got {value}"
@@ -45,8 +51,16 @@ class ActionsArgType(ArgType):
         value = []
 
         if not isinstance(actions, list):
-            raise ValueError(f"`actions` must be a list, got {type(actions)}")
+            msg = f"`actions` must be a list, got {type(actions).__name__}"
+            if isinstance(actions, dict):
+                msg += (
+                    f" did you mean `- {list(actions.keys())[0]}:` ?"
+                )
+            if isinstance(actions, str):
+                msg += f" did you mean `[{actions}]` or `- {actions}` ?"
+            raise ValueError(msg)
 
+        _valid = ", ".join(Action.Config.valid_ansible_arguments)
         for action in actions:
             if isinstance(action, dict):
                 # ensure this is a single key-value pair
@@ -63,6 +77,13 @@ class ActionsArgType(ArgType):
                     )
                 module_name, action_name = action_key.split(".")
                 action_value = action[action_key]
+                if not isinstance(action_value, dict):
+                    raise ValueError(
+                        f"`{action_key}:` takes"
+                        " {param: value, ...},"
+                        f" where `param` is one of {_valid}"
+                        f", but got {action_value}"
+                    )
 
                 try:
                     action = Action(
@@ -71,23 +92,27 @@ class ActionsArgType(ArgType):
                         **action_value,
                     )
                 except TypeError as e:
-                    _valid = ", ".join(Action.Config.valid_ansible_arguments)
                     _invalid = set(action_value) - set(
                         Action.Config.valid_ansible_arguments
                     )
 
                     raise ValueError(
-                        f"'Unsupported parameters for `actions`: {_invalid}"
+                        f"Unsupported parameters"
+                        f" for `{action_key}: {_invalid}`"
                         f". Supported parameters include: {_valid}"
                     ) from e
 
             elif isinstance(action, str):
+                if "." not in action:
+                    raise ValueError(
+                        f"`action` must be <module>.<action>, got {action}"
+                    )
                 module, action_name = action.split(".")
                 action = Action(module_name=module, action_name=action_name)
             else:
                 raise ValueError(
                     f"`actions` must be a list of dicts"
-                    f" or strings, got {type(action)}"
+                    f" or strings, got {type(action).__name__}"
                 )
             value.append(action)
 
@@ -96,83 +121,31 @@ class ActionsArgType(ArgType):
 
 
 class SkipifArgType(ArgType):
-    type = str
+    type = SkipIfList
 
     def __call__(self, value) -> str:
-        if not isinstance(value, str):
-            raise ValueError(f"`skipif` must be a string, got {type(value)}")
-        self.value = self.type(value)
+        self.value = validate_conditionals(value, "skipif", SkipIf, self.type)
         return value
 
 
 class ExpectArgType(ArgType):
     type = ExpectList
 
-    def __call__(self, expect) -> list:
-        """
-        1. Check if value is a list or str
-            1.1 Each item in the list must be a str
-        2. for each value create an Expect instance
-        3. Add the Expect instance to the return value
-        """
-        value = []
-
-        if not isinstance(expect, (list, str)):
-            raise ValueError(
-                f"`expect` must be a list or str, got {type(value)}"
-            )
-
-        if isinstance(expect, str):
-            expect = [expect]
-
-        for item in expect:
-            if not isinstance(item, str):
-                raise ValueError(f"each `expect` must a str, got {type(item)}")
-            value.append(Expect(condition=item))
-
-        self.value = self.type(value)
-        return expect
+    def __call__(self, value) -> list:
+        self.value = validate_conditionals(value, "expect", Expect, self.type)
+        return value
 
 
 class ExportArgType(ArgType):
-    type = dict
+    type = ExportDict
 
     def __call__(self, value) -> dict:
-        """
-        1. Ensure value is a dictionary
-        2. ensure every value in the dictionary is a str
-        """
-        if not isinstance(value, dict):
-            raise ValueError(
-                f"`export` must be a dictionary, got {type(value)}"
-            )
-        for k, v in value.items():
-            if not isinstance(k, str):
-                raise ValueError(
-                    f"`export` keys must be strings, got {type(k)}"
-                )
-            if not isinstance(v, str):
-                raise ValueError(
-                    f"`export` values must be strings, got {type(v)}"
-                )
-        self.value = self.type(value)
+        self.value = self.type(validate_export_dict(value))
         return value
 
 
 class RequiredArgType(ArgType):
-    type = bool
 
     def __call__(self, value) -> bool:
-        """
-        Ensure it is a boolean from values
-        on, off, yes, no, true, false, 1, 0, True, False
-        """
-        truthy = [True, "on", "yes", "true", "1"]
-        falsy = [False, "off", "no", "false", "0"]
-        if isinstance(value, str):
-            value = value.lower()
-        if value not in falsy + truthy:
-            raise ValueError(f"`required` must be a boolean, got {value}")
-        value = True if value in truthy else False
-        self.value = self.type(value)
+        self.value = validate_boolean(value)
         return value
