@@ -4,26 +4,72 @@ ansible.test.case is a testing framework and test runner within ansible tasks, i
 ## Declarative test cases
 
 ```YAML
-# This is a standard ansible-playbook-task.yaml 
+# This is a standard ansible-playbook named test-case.yaml
 ---
-- name: Create Two Active Users          # The name of the test case        
-  ansible.test.case:                     # Declare the test.case module
-    using: namespace.project.user        # Project specific actions module
-    action: create                       # The action to perform
-    inputs:                              # The inputs to the action
-      - name: admin
-        password: admin
-        active: true
-      - name: user
-        password: user
-        active: true
-    register: users                      # The result of the action is registered as users
-    assert:                              # The assertions to perform
-      - that: status == ok               # Assert that the status code is success, possible statuses are ok, error, skipped
+- name: Test Create User
+  ansible.test.case:
+    using: namespace.project
+    actions:
+
+      - user.read:
+          via: api
+          inputs:
+            name: admin
+          export:
+            admin_user: result.data
+            user_exists: result.status_code != 404
+        
+      - user.create:
+          skipif: user_exists
+          via: api
+          inputs:
+            name: admin
+            password: "{{ generate_password('str', 8, 'strong') }}"
+          expect:
+            - result.status == ok
+          export: admin_user
+    
+      - user.read:
+          via: [api, cli, ui]
+          inputs:
+            name: admin_user.name
+          expect:
+            - result.status == ok
+            - result.data.name == admin_user.name
+            - result.api.status_code == 200
+            - result.cli.rc == 0
+            - result.ui.has_element('#username')
+            - result.ui.element_value('#username') == admin_user.name
 ```
 
 ```bash
-ansible-playbook my-test-suite.yaml
+$ ansible-playbook --connection=local test-case.yaml
+# or
+$ ansible-playbook -i my.ci.host, test-case.yaml
+```
+
+Outputs:
+
+```plain
+PLAY [Functional tests for project] *********************
+
+TASK [Gathering Facts] **********************************
+ok: [localhost]
+
+TASK [Test Create User] *********************************
+ok: [localhost] => 
+    user.read: status=ok, api.status_code=404 [PASSED]
+    user.create: status=ok, api.status_code=200 [PASSED]
+    user.read: status=ok, api.status_code=200, cli.rc=0, ui.state=loaded [PASSED]
+
+TASK [Junit Report] *************************************
+ok: [localhost] => (file=junit/test-case-result.xml)
+
+TASK [Uploading junit report] ***************************
+ok: [localhost] => (to=metrics.host, status=ok)
+
+TASK [Saving Selenium Screenshots] ***********************
+ok: [localhost] => (to=/screenshots/build-1234, status=ok)
 
 ```
 

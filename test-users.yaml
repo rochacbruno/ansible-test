@@ -21,66 +21,66 @@
     export:
       blarg: result.foo
 
-# - name: Create Two Active Users
-#   ansible.test.case:
-#     using: namespace.project
-#     actions:
-#       - user.create:
-#           inputs:
-#             - name: admin
-#               password: admin
-#               active: true
-#             - name: user
-#               password: user
-#               active: true
-#           expect:
-#             - result.status == ok
-#       - user.update:
-#           inputs:
-#             get:
-#               name: admin
-#             set:
-#               active: false
-#           expect:
-#             - result.status == ok
-#             - result.data.active == false
-#       - user.list:
-#           title: Listing Created Users
-#           outputs: users1
-#           expect: result.status == ok      
-#       - user.list:
-#           title: Listing Created Users
-#           outputs: users2
-#           expect: result.status == ok
-#       - user.refresh
-#     export:
-#       # users: result.actions[2].data + result.actions[3].data
-#       users: users1 + users2
-#     expect:
-#       - result.status == ok
-#       - result.data.users[0].name == admin
-#       - result.actions[1].data.active == false
-#       - result.actions['my-update'].data.active == false
-#       - users == [admin, user]
+- name: Create Two Active Users
+  ansible.test.case:
+    using: namespace.project
+    actions:
+      - user.create:
+          inputs:
+            - name: admin
+              password: admin
+              active: true
+            - name: user
+              password: user
+              active: true
+          expect:
+            - result.status == ok
+      - user.update:
+          inputs:
+            get:
+              name: admin
+            set:
+              active: false
+          expect:
+            - result.status == ok
+            - result.data.active == false
+      - user.list:
+          title: Listing Created Users
+          export: users1
+          expect: result.status == ok      
+      - user.list:
+          title: Listing Created Users
+          export: users2
+          expect: result.status == ok
+      - user.refresh
+    export:
+      # users: result.actions[2].data + result.actions[3].data
+      users: users1 + users2
+    expect:
+      - result.status == ok
+      - result.data.users[0].name == admin
+      - result.actions[1].data.active == false
+      - result.actions['my-update'].data.active == false
+      - users == [admin, user]
 
-# - name: Update password of user
-#   ansible.test.case:
-#     using: namespace.project
-#     actions:
-#       - user.update:
-#           inputs:
-#             get:
-#               name: "{{ users[1] }}"
-#             set:
-#               password: "foo-bar"
-#           expect:
-#             - result.status == ok
-#     expect:
-#       - result.status == ok
+- name: Update password of user
+  ansible.test.case:
+    using: namespace.project
+    actions:
+      - user.update:
+          inputs:
+            get:
+              name: "{{ users[1].name }}"
+            set:
+              password: "foo-bar"
+          expect:
+            - result.status == ok
+    expect:
+      - result.status == ok
 
-# - name: debug users
-#   debug:
-#     msg: "{{ users }}"
+- name: debug users
+  debug:
+    msg: "{{ users }}"
 
 # - name: User name is unique 
 #   ansible.test.case:

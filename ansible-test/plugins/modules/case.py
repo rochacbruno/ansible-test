@@ -41,8 +41,6 @@ def run_module():
 
     module = AnsibleModule(argument_spec=module_args, supports_check_mode=True)
 
-    # __import__("sdb").set_trace()
-
     test_case: TestCase = TestCase.from_module(module)
 
     result = {"changed": False, "test_case": str(test_case)}
@@ -53,10 +51,12 @@ def run_module():
     result["changed"] = True
     result["status"] = "ok"  # enum?
 
-    # action_result = [{"name": "admin"}]
-    # result["ansible_facts"] = {}
-    # if (fact := module.params["outputs"]):
-    #     result["ansible_facts"][fact] = action_result
+    action_result = [{"name": "admin"}, {"name": "user"}]
+    result["ansible_facts"] = {}
+
+    if test_case.export:
+        for k, v in test_case.export.items():
+            result["ansible_facts"][k] = action_result
 
     # result['original_message'] = module.params['name']
     # result['message'] = 'goodbye'
