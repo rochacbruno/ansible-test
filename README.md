@@ -1,5 +1,7 @@
+**WARNING** This is a Work in Progress
+
 # ansible-test
-ansible.test.case is a testing framework and test runner within ansible tasks, it talks to API using openapispec, to Selenium using pageObjects and CLI using pexpect.
+ansible.test.case is a testing framework and test runner within ansible tasks, it **WILL** taslk to API using openapispec, to Selenium using pageObjects and CLI using pexpect.
 
 ## Declarative test cases
 
